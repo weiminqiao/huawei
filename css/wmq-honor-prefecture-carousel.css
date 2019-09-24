@@ -1,0 +1,74 @@
+/*
+* @Author: admin
+* @Date:   2019-09-18 15:58:16
+* @Last Modified by:   admin
+* @Last Modified time: 2019-09-22 16:26:03
+*/
+.wmq-hot{
+    width: 100%;
+    min-width: 1220px;
+    height: 550px;
+    margin: 0px;
+    overflow: hidden;
+    position:absolute;
+    top:115px; 
+}
+.wmq-hot-uls{
+	list-style: none;
+	width: 99999px;
+	/*给ul足够大的宽度，使li可以全部水平排列*/
+}
+.wmq-hot-uls li{
+	float:left;
+	z-index:0;
+
+}
+.wmq-hot-uls li img{
+	width:1920px;
+	height:550px;					
+}
+.wmq-hot>span{
+	position:absolute;
+	background: rgba(0,0,0,0.4);
+	color:#fff;
+	width: 20px;
+	height: 30px;
+	top:50%;
+	margin-top:-10px;
+	cursor: pointer;
+}
+#wmq-hot-left{
+	width:58px;
+	height:58px;
+	border-radius:50%;
+	left:74px;
+	line-height:58px;
+	text-align:center;
+}
+#wmq-hot-right{
+	width:58px;
+	height:58px;
+	border-radius:50%;
+	right:74px;
+	line-height:58px;
+	text-align:center;
+}
+.wmq-hot-lis{
+	list-style:none;
+	position:absolute;
+	left:45%;
+	bottom:60px;
+	
+}
+.wmq-hot-lis li{
+	float: left;
+	border:1px solid orange;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	cursor:pointer;
+	margin-left:10px;
+}
+.wmq-selected{
+	background:orange;
+}

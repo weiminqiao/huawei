@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>花粉俱乐部</title>
+        <link rel="stylesheet" href="../css/jxhf-css/hfuns.css">
+        <script src='../js/jxhf-js/hfuns.js'></script>
+        <script src='../js/jxhf-js/jquery-3.4.1.js'></script>
+        <script src='../js/jxhf-js/bootstrap.js'></script>
+        <link rel="stylesheet" href="../jxhf-css/demo.css">
+        <script src='../js/jxhf-js/iconfont.js'></script>
+        <script src='../js/jxhf-js/iconfont2.js'></script>
+        <script src='../js/jxhf-js/iconfontjxwx.js'></script>
+        <script src='../js/jxhf-js/iconfont4.js'></script>
+    </head>
+    <style>
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+      font-size:30px;
+        }
+    </style>
+    <style>
+.codeHov {
+    float: none !important;
+    display: block;
+    line-height: 36px;
+    height: 36px !important;
+    color: #B7B7B7 !important;
+    padding-left: 18px !important;
+    background: url('../img/手机 (1).png') no-repeat left center;
+    background-size: 16px 16px;
+    margin-right: 15px;
+}
+.btn {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background: url("../img/搜索.png") no-repeat -2px -99px;
+    top: 6px;
+    left: 285px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.boxxxxxx{
+	width: 100px;
+	height: 100px;
+	position:fixed;
+	margin-top:10px;
+	z-index:1000000;
+}
+    </style>
+    <body style="overflow-x: hidden;overflow:-scroll">
+    <div class="boxxxxxx">
+    	<audio src="audio/视频1.kux"></audio>
+    </div>
+    <div class="box">
+    <div class="top">
+    <ul class="uls">
+    	<li><a href="../page/huawei.html">华为官网</a></li>
+    	<li><a href="../page/wmq-honor-index.html">荣耀官网</a></li>
+    	<li><a href="../index.html">华为商城</a></li>
+    	<li><a href="">售后服务</a></li>
+    	<li class="list" id="list" ><a href="">软件应用</a>
+    	<div class="downlist" id="downlist">
+    		<a href="" target="_blank" rel="显示失败" style="margin: 0;">华为终端云空间</a>
+    		<a href="" target="_blank" rel="显示失败" style="margin: 0;">EMUI</a>
+    		<a href="" target="_blank" rel="显示失败" style="margin: 0;">应用市场</a>
+    		<a href="" target="_blank" rel="显示失败" style="margin: 0;">开发者联盟</a>
+    	</div>
+    	</li>
+    	<li><a href="">花粉俱乐部</a></li>
+    </ul>
+   
+
+     <div class="top-right">
+    	<a href="" class="codeHov">客户端</a>
+    	<div class="erweima">
+    		<img src="../img/二维码.png" alt="扫描二维码下载app">
+    	</div>
+    </div>
+      <div class="top-right2">
+    	<a href="">登录</a>
+    	<b>/</b>
+    	<a href="">立即注册</a>
+    </div>
+  
+
+    </div>
+    <script>
+    	$(function(){
+    		$('.list').mouseover(function(event) {
+    			/* Act on the event */
+    			$('#downlist').show();
+    		});
+    		$('.list').mouseleave(function(event) {
+    			/* Act on the event */
+    			$('#downlist').hide();
+    		});
+    		// 二维码
+    		$('.top-right').mouseover(function(event) {
+    			/* Act on the event */
+    			$('.erweima').show();
+    		});
+    		$('.top-right').mouseleave(function(event) {
+    			/* Act on the event */
+    			$('.erweima').hide();
+    		});
+
+    		// 微信二维码
+    		$('.weixinerweima').mouseover(function(event) {
+    			/* Act on the event */
+    			$('.erweima2').css('display', 'block');
+    		});
+    		$('.weixinerweima').mouseleave(function(event) {
+    			/* Act on the event */
+    			$('.erweima2').css('display', 'none');
+    		});
+    	})
+    </script>
+
+
+<!--  -->
+    <div class="hd">
+    <div class="th">
+    <div class="th-1">
+
+
+    	<a href="">
+    		<img class="em-huaweilogo" src="../img/huaweilogo.png" alt="花粉俱乐部">
+    	</a>
+    	    <div class="em-medline"></div>
+    	<a href="" title="花粉俱乐部">
+    		<img class="em-fansclub" src="../img/fansclub.png" alt="花粉俱乐部">
+    	</a>
+
+    	<img class="em-forlove " src="../img/forlove.png" alt="花粉俱乐部 因为热爱">
+    	<!-- 搜索框 -->
+
+   
+    <div class="container">
+    <form action="" class="parent">
+        <input id="input1" type="text" name="search" placeholder="请输入关键字">
+        <img style="width: 20px;position: absolute;left: 140px;top: 15px;" src="../img/搜索.png" />
+        <span class="search">搜索</span>
+    </form>
+    </div>
+    </div>
+
+<!-- 菜单栏 -->
+    <div id="nv" class="hfixed" style="top: 0px; left:1px; z-index: 199;">
+    <div class="eh_menu" style="height:46px;">
+    <!-- <a href="javascript:;" id="qmenu" onmouseover="delayShow(this, function () {showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});showForummenu(0);})">快捷导航失败。</a> -->
+    <ul class="ulsss" style="height:46px;">
+    	<li data-menu="1"  class="active" id="mn_portal" ><a  href="#" hidefocus="true" title="Portal"  >首页<span>Portal</span></a></li>
+
+
+    	<li data-menu="2"  id="mn_Ne201" ><a  href="#" hidefocus="true"  >论坛</a></li>
+
+
+    	<li data-menu="3"  id="mn_forum" ><a  href="#" hidefocus="true" title="BBS"  >版块<span>BBS</span></a></li>
+    	
+    	<li data-menu="4"  id="mn_Ndd24" ><a  href="#" hidefocus="true"  >随手拍</a></li>
+
+    	<li data-menu="5"  id="mn_N056c" ><a  href="#" hidefocus="true"  >圈子</a>
+
+
+
+    	</li>
+
+
+    	<li data-menu="6"  id="mn_N7f36" ><a  href="#" hidefocus="true" title="Auction"  >花瓣商店<span>Auction</span></a></li>
+
+
+    	<li data-menu="7"  id="mn_N21b6" ><a  href="#" hidefocus="true"  >翻牌吧！花粉</a></li>
+
+
+    	<li data-menu="8"  id="mn_N0c54" ><a  href="#" hidefocus="true"  >活动</a></li>
+
+
+    	<li data-menu="9"  id="mn_N01e3"><a href="#" hidefocus="true" target="_blank">更多∨</a>
+    	</li>
+    </ul>
+
+
+
+
+    <script>
+			$(function(){
+				var a=$('#nv').offset().top-$(window).height();
+				console.log(a);
+				$(window).scroll(function(event) {
+					// 窗口滚动事件
+					// .scrollTop()  滚动条距离窗口顶部的距离
+					console.log($(this).scrollTop());
+					if($(this).scrollTop()>150){
+						$('#nv').css({
+							position: 'fixed',
+							
+						});
+						$('#nv').css({
+							opacity: '0.7',
+							
+						});
+					}else{
+						$('#nv').css({
+							position: 'relative',
+							
+						});
+						$('#nv').css({
+							opacity: '1',
+							
+						});
+					}
+
+					// if($(this).scrollTop()>a){
+					// 	$('body').css('background', 'pink');
+					// }
+
+					// 滚动固定定位
+
+				});
+			})
+		</script>
+    </div>
+    </div>
+    <!-- 圈子 -->
+     <ul class="pop" id="mn_N056c_menu" style="
+        display: none ;   
+        position: absolute;
+        z-index: 301;
+        left: 700px;
+        top: 155px;
+        display: none;"
+        initialized="true" 
+        ctrlid="mn_N056c" 
+        ctrlclass="hover">
+     <li><a href="" hidefocus="true">兴趣俱乐部</a></li>
+     <li><a href="" hidefocus="true">同城俱乐部</a></li>
+     <li><a href="" hidefocus="true">高校俱乐部</a></li></ul>
+
+<!-- 板块 -->
+<script>
+	$(function(){
+		$('#mn_forum').click(function(event) {
+			/* Act on the event */
+			$('.bankuai-9').fadeToggle('1000', function() {
+				
+			});
+
+		});
+		$('.bankuai-9').mouseleave(function(event) {
+			/* Act on the event */
+			$('.bankuai-9').fadeToggle('1000', function() {
+				
+			});
+		});
+
+	})
+</script>
+     <div class="bankuai-9">
+		  	<ul>
+		  	<h1>荣耀手机</h1>
+		  		<li>荣耀20系列</li>
+		  		<li>荣耀v20</li>
+		  		<li>荣耀play3</li>
+		  		<li>荣耀9x</li>
+		  		<li>华为荣耀</li>
+		  	</ul>
+		  	<ul>
+		  	<h1>华为手机</h1>
+		  		<li>华为Mate30系列</li>
+		  		<li>华为p30系列</li>
+		  		<li>华为P30系列</li>
+		  		<li>华为畅享10Plus</li>
+		  		<li>华为Mate20系列</li>
+		  	</ul>
+		  	<ul>
+		  	<h1>平板/笔记本</h1>
+		  		<li>荣耀平板5</li>
+		  		<li>华为平板M6</li>
+		  		<li>华为平板M5青春版</li>
+		  		<li>荣耀MagicBook</li>
+		  		<li>华为平板M6</li>
+		  	</ul>
+		  	<ul>
+		  	<h1>智能穿戴</h1>
+		  		<li>华为手环 3/3 Pro</li>
+		  		<li>HONOR Watch</li>
+		  		<li>荣耀手环5</li>
+		  		<li>华为荣耀</li>
+		  		<li>华为手环 3/3 Pro</li>
+		  	</ul>
+
+			
+		</div>
+
+     <!-- 更多 -->
+     <ul class="pop2" id="mn_N01e3_menu" style="
+        display: none ;   
+        position: absolute;
+        z-index: 301;
+        left: 1150px;
+        top: 152px;
+        display: none; 
+        width: 120px;   
+        border-color: #DDD;
+        background:white;"
+        initialized="true" 
+        ctrlid="mn_N01e3" 
+        ctrlclass="hover">
+     
+     <li><a href="" hidefocus="true">投票</a></li>
+     <li><a href="" hidefocus="true">内测</a></li></ul>
+
+    <script>
+    	$(function(){
+    		$('#mn_N056c').mouseover(function(event) {
+    			/* Act on the event */
+    			$('.pop').show();
+    		});
+    		$('#mn_N056c').mouseleave(function(event) {
+    			/* Act on the event */
+    			$('.pop').hide();
+    		});
+    		$('.pop').mouseover(function(event) {
+    			/* Act on the event */
+    			$('.pop').show();
+    		});
+    		$('.pop').mouseleave(function(event) {
+    			/* Act on the event */
+    			$('.pop').hide();
+    		});
+
+
+    		// 更多
+    		$('#mn_N01e3').mouseover(function(event) {
+    			/* Act on the event */
+    			$('.pop2').show();
+    		});
+    		$('#mn_N01e3').mouseleave(function(event) {
+    			/* Act on the event */
+    			$('.pop2').hide();
+    		});
+    		$('.pop2').mouseover(function(event) {
+    			/* Act on the event */
+    			$('.pop2').show();
+    		});
+    		$('.pop2').mouseleave(function(event) {
+    			/* Act on the event */
+    			$('.pop2').hide();
+    		});
+    	})
+    </script>
+    </div>
+    </div>
+<!-- 轮播图 -->
+	<div class="lunbo" id="lunbo" style="">
+    
+	<ul id="ulssssss">
+	<img src="../img/轮播01.png">
+	<li><img src="../img/轮播01.png"></li>
+	<li><img src="../img/轮播02.jpg"></li>
+	<li><img src="../img/轮播03.jpg"></li>
+	<li><img src="../img/轮播04.jpg"></li>
+	<li><img src="../img/轮播05.png"></li>
+	<li><img src="../img/轮播01.png"></li>
+	</ul>
+	<span id="leftt"><img src="../img/向左.png" alt=""></span>
+    <span id="rightt"><img src="../img/向右.png" alt=""></span>
+
+    <ol id="ols" class="ols">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+
+		
+	</div>
+	<script>
+	var uls=document.getElementById('ulssssss').children;
+	var obox=document.getElementById('lunbo');
+	var oright=document.getElementById('rightt');
+	var oleft=document.getElementById('leftt');
+	var olis=document.getElementById('ols').children;
+	var num=0;
+	var timer;
+		function go(){
+			timer=setInterval(function(){
+				num++;
+				if(num>5){
+					num=1;
+				}
+				for(var i=0;i<uls.length;i++){
+				    uls[i].setAttribute('class', '');
+				}
+				  uls[num].setAttribute('class', 'selected');
+				},2000)
+			}
+			go();
+			// 
+			obox.onmouseenter=function(){
+				// 鼠标移入，停止定时器
+				clearInterval(timer);
+			}
+
+			obox.onmouseleave=function(){
+				// 鼠标移出，启动定时器
+				go();
+			}
+            // 向左
+			oleft.onclick=function(){
+				num--;
+				if(num<=0){
+					num=5;
+				}
+				for(var i=0;i<uls.length;i++){
+				    uls[i].setAttribute('class', '');
+				}
+				 uls[num].setAttribute('class', 'selected');	
+			}
+			 // 向右
+			oright.onclick=function(){
+				num++;
+				if(num>5){
+					num=1;
+				}
+				for(var i=0;i<uls.length;i++){
+				    uls[i].setAttribute('class', '');
+				}
+				 uls[num].setAttribute('class', 'selected');
+				 console.log(uls[num]);	
+			}
+
+			//底部
+			for(var i=0;i<olis.length;i++){
+
+				olis[i].setAttribute('index', i);
+				console.log(olis[i]);
+				olis[i].onclick=function(){
+
+				num=this.getAttribute('index');
+				console.log(num);
+
+				for(var i=0;i<uls.length;i++){
+				    uls[i].setAttribute('class', '');
+				}
+				uls[num].setAttribute('class', 
+					'selected');
+				console.log(uls[num]);
+
+				}
+
+			}
+		</script>
+		<!-- 中部 -->
+		<div class="banana" style=" 
+		margin: 2px auto 0;
+        width: 984px;
+        height: 174px;
+        background-color: #f0f0f0;">
+		<ul class="banana-ul">
+			<li>
+				<a href="#">
+					<img src="../img/升级尝鲜.jpg" alt="" width="320" height="174">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="../img/社区百科.jpg" alt="" width="320" height="174">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="../img/玩机技巧.jpg" alt="" width="320" height="174">
+				</a>
+			</li>
+		</ul>
+			
+		</div>
+
+		<div class="big">
+		<div class="protal">
+
+		<!-- 第一个ppp -->
+		<div class="protal-first">
+		<a href="">
+		<img src="../img/数码人的资讯晚餐.jpg" width="660" height="220"  alt="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？,荣耀9X-花粉俱乐部"">
+		</a>
+		 <h3><a  href=" " title="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？" >资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？</a></h3>
+		 <div class="protal-top">
+		    <a href="">
+		 	<strong>荣耀9X</strong>
+		 	</a>
+		 <span class="hbwa-details">/ <a rel="nofollow" href="space-uid-42367429.html">趣姐别开车</a>最后回复<i><span title="2019/9/17 16:10">2&nbsp;分钟前</span></i>
+         </span>
+         <a href="#" class="banana-replies"><img src="../img/眼睛.png" width="20" height="20" top='10px' alt="">35207</a>
+         <a href="#" class="banana-share"><img src="../img/分享.png" width="20" height="20">分享</a>
+		</div>	
+		<p>趣姐新鲜出炉资讯晚餐</p>
+		</div>
+
+
+		<!-- 第二个ppp -->
+		<div class="protal-two">
+		<a href="">
+		<img src="../img/数码人的资讯晚餐.jpg" width="660" height="220"  alt="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？,荣耀9X-花粉俱乐部"">
+		</a>
+		 <h3><a  href=" " title="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？" >资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？</a></h3>
+		 <div class="protal-top">
+		    <a href="">
+		 	<strong>荣耀9X</strong>
+		 	</a>
+		 <span class="hbwa-details">/ <a rel="nofollow" href="space-uid-42367429.html">趣姐别开车</a>最后回复<i><span title="2019/9/17 16:10">2&nbsp;分钟前</span></i>
+         </span>
+         <a href="#" class="banana-replies"><img src="../img/眼睛.png" width="20" height="20" top='10px' alt="">35207</a>
+         <a href="#" class="banana-share"><img src="../img/分享.png" width="20" height="20">分享</a>
+		</div>	
+		<p>趣姐新鲜出炉资讯晚餐</p>
+		</div>
+
+
+		<!-- 第三个ppp -->
+		<div class="protal-two">
+		<a href="">
+		<img src="../img/数码人的资讯晚餐.jpg" width="660" height="220"  alt="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？,荣耀9X-花粉俱乐部"">
+		</a>
+		 <h3><a  href=" " title="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？" >资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？</a></h3>
+		 <div class="protal-top">
+		    <a href="">
+		 	<strong>荣耀9X</strong>
+		 	</a>
+		 <span class="hbwa-details">/ <a rel="nofollow" href="space-uid-42367429.html">趣姐别开车</a>最后回复<i><span title="2019/9/17 16:10">2&nbsp;分钟前</span></i>
+         </span>
+         <a href="#" class="banana-replies"><img src="../img/眼睛.png" width="20" height="20" top='10px' alt="">35207</a>
+         <a href="#" class="banana-share"><img src="../img/分享.png" width="20" height="20">分享</a>
+		</div>	
+		<p>趣姐新鲜出炉资讯晚餐</p>
+		</div>
+
+
+		<!-- 第四个ppp -->
+		<div class="protal-two">
+		<a href="">
+		<img src="../img/数码人的资讯晚餐.jpg" width="660" height="220"  alt="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？,荣耀9X-花粉俱乐部"">
+		</a>
+		 <h3><a  href=" " title="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？" >资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？</a></h3>
+		 <div class="protal-top">
+		    <a href="">
+		 	<strong>荣耀9X</strong>
+		 	</a>
+		 <span class="hbwa-details">/ <a rel="nofollow" href="space-uid-42367429.html">趣姐别开车</a>最后回复<i><span title="2019/9/17 16:10">2&nbsp;分钟前</span></i>
+         </span>
+         <a href="#" class="banana-replies"><img src="../img/眼睛.png" width="20" height="20" top='10px' alt="">35207</a>
+         <a href="#" class="banana-share"><img src="../img/分享.png" width="20" height="20">分享</a>
+		</div>	
+		<p>趣姐新鲜出炉资讯晚餐</p>
+		</div>
+
+
+		<!-- 第五个ppp -->
+		<div class="protal-two">
+		<a href="">
+		<img src="../img/数码人的资讯晚餐.jpg" width="660" height="220"  alt="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？,荣耀9X-花粉俱乐部"">
+		</a>
+		 <h3><a  href=" " title="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？" >资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？</a></h3>
+		 <div class="protal-top">
+		    <a href="">
+		 	<strong>荣耀9X</strong>
+		 	</a>
+		 <span class="hbwa-details">/ <a rel="nofollow" href="space-uid-42367429.html">趣姐别开车</a>最后回复<i><span title="2019/9/17 16:10">2&nbsp;分钟前</span></i>
+         </span>
+         <a href="#" class="banana-replies"><img src="../img/眼睛.png" width="20" height="20" top='10px' alt="">35207</a>
+         <a href="#" class="banana-share"><img src="../img/分享.png" width="20" height="20">分享</a>
+		</div>	
+		<p>趣姐新鲜出炉资讯晚餐</p>
+		</div>
+
+
+		<!-- 第六个ppp -->
+		<div class="protal-two">
+		<a href="">
+		<img src="../img/数码人的资讯晚餐.jpg" width="660" height="220"  alt="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？,荣耀9X-花粉俱乐部"">
+		</a>
+		 <h3><a  href=" " title="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？" >资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？</a></h3>
+		 <div class="protal-top">
+		    <a href="">
+		 	<strong>荣耀9X</strong>
+		 	</a>
+		 <span class="hbwa-details">/ <a rel="nofollow" href="space-uid-42367429.html">趣姐别开车</a>最后回复<i><span title="2019/9/17 16:10">2&nbsp;分钟前</span></i>
+         </span>
+         <a href="#" class="banana-replies"><img src="../img/眼睛.png" width="20" height="20" top='10px' alt="">35207</a>
+         <a href="#" class="banana-share"><img src="../img/分享.png" width="20" height="20">分享</a>
+		</div>	
+		<p>趣姐新鲜出炉资讯晚餐</p>
+		</div>
+
+
+		<!-- 第七个ppp -->
+		<div class="protal-two">
+		<a href="">
+		<img src="../img/数码人的资讯晚餐.jpg" width="660" height="220"  alt="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？,荣耀9X-花粉俱乐部"">
+		</a>
+		 <h3><a  href=" " title="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？" >资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？</a></h3>
+		 <div class="protal-top">
+		    <a href="">
+		 	<strong>荣耀9X</strong>
+		 	</a>
+		 <span class="hbwa-details">/ <a rel="nofollow" href="space-uid-42367429.html">趣姐别开车</a>最后回复<i><span title="2019/9/17 16:10">2&nbsp;分钟前</span></i>
+         </span>
+         <a href="#" class="banana-replies"><img src="../img/眼睛.png" width="20" height="20" top='10px' alt="">35207</a>
+         <a href="#" class="banana-share"><img src="../img/分享.png" width="20" height="20">分享</a>
+		</div>	
+		<p>趣姐新鲜出炉资讯晚餐</p>
+		</div>
+
+		<!-- 第八个ppp -->
+		<div class="protal-two">
+		<a href="">
+		<img src="../img/数码人的资讯晚餐.jpg" width="660" height="220"  alt="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？,荣耀9X-花粉俱乐部"">
+		</a>
+		 <h3><a  href=" " title="资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？" >资讯 | 荣耀9X PRO AI超清模式来啦，华为Mate30包装盒长这样？</a></h3>
+		 <div class="protal-top">
+		    <a href="">
+		 	<strong>荣耀9X</strong>
+		 	</a>
+		 <span class="hbwa-details">/ <a rel="nofollow" href="space-uid-42367429.html">趣姐别开车</a>最后回复<i><span title="2019/9/17 16:10">2&nbsp;分钟前</span></i>
+         </span>
+         <a href="#" class="banana-replies"><img src="../img/眼睛.png" width="20" height="20" top='10px' alt="">35207</a>
+         <a href="#" class="banana-share"><img src="../img/分享.png" width="20" height="20">分享</a>
+		</div>	
+		<p>趣姐新鲜出炉资讯晚餐</p>
+		</div>
+
+		<div class="pages" >
+		    <div class="pg">
+		    	<strong>1</strong>
+		    	<a href="">2</a>
+		    	<a href="">3</a>
+		    	<a href="">4</a>
+		    	<a href="">5</a>
+		    	<a href="">6</a>
+		    	<a href="">7</a>
+		    	<a href="">8</a>
+		    	<a href="">9</a>
+		    	<a href="">10</a>
+               <a href="">... 273</a>
+               <a href="" class="nxt">下一页</a>
+
+
+		    </div>
+			
+		</div>
+		</div>
+
+        <div class="big-right">
+        <!-- 签到 -->
+        <div class="big-right-one">
+        <img src="../img/花粉签到.jpg" alt="">
+        <p class="p1">今日领取人数</p>
+        <p class="p2">59248</p>
+        <a class="p3" href="">签到领花瓣</a>
+        </div>
+        <!-- 小编推荐 -->
+        <div class="big-right-two">
+        <div class="frame  frame1">
+        <div class="mainframe">
+
+
+         <style>
+       .xbtj-li{
+        background-position: -238px -1040px;
+        background-image: url('../img/原点.png');
+        background-repeat: no-repeat;
+        background-position: -49px -150px -65px -165px    ;
+        line-height: 30px;
+        padding-left: 32px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 30px;
+        width: 212px;
+        white-space: nowrap;
+        }
+        .xbtj-li2{
+        background-position: -238px -1040px;
+        background-image: url('../img/原点.png');
+        background-repeat: no-repeat;
+        background-position: -2px -152px -13px -164px;
+        line-height: 30px;
+        padding-left: 32px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 30px;
+        width: 212px;
+        white-space: nowrap;
+        }
+        </style>
+
+            <div class="mainframe-temp">
+            	<div class="xiaobiantuijian">
+            	   <div class="xiaobiantuijian-main">
+            	   	<h3>小编推荐</h3>
+            	   	<ul class="ul-xbtj">
+            	   		<li class="xbtj-li">
+            	   			<a href="thread-21326664-1-1.html" title="EMUI 10.0花粉体验招募！寻找敢玩的你！" target="_blank"><b></b>EMUI 10.0花粉体验招募！寻找敢玩的你！</a>
+            	   			<b></b>
+            	   		</li>
+            	   		<li class="xbtj-li">
+            	   			<a href="thread-21326664-1-1.html" title="华为手机真好用，以后还买！寻找敢玩的你！" target="_blank"><b></b>华为手机真好用，以后还买！寻找敢玩的你！</a>
+            	   			<b></b>
+            	   		</li>
+            	   		<li class="xbtj-li">
+            	   			<a href="thread-21326664-1-1.html" title="网速不好？买华为！寻找敢玩的你！" target="_blank"><b></b>网速不好？买华为吧网速特别好，寻找敢玩的你！</a>
+            	   			<b></b>
+            	   		</li>
+            	   		<li class="xbtj-li2">
+            	   			<a href="" style="color: #524b48;" title="信号贼拉好，网速贼拉慢？三招网速蹭蹭涨" target="_blank"><b></b>信号贼拉好，网速贼拉慢？三招网速蹭蹭涨</a>
+            	   			<b></b>
+            	   		</li>
+            	   		<li class="xbtj-li2">
+            	   			<a href="" style="color: #524b48;" title="荣耀9X系列的这些操作姿势你知道吗？" target="_blank"><b></b>荣耀9X系列的这些操作姿势你知道吗？</a>
+            	   			<b></b>
+            	   		</li>
+            	   		<li class="xbtj-li2">
+            	   			<a href="" style="color: #524b48;" title="耗电快太烦恼？那是你没看过此贴！" target="_blank"><b></b>耗电快太烦恼？那是你没看过此贴！</a>
+            	   			<b></b>
+            	   		</li>
+            	   		<li class="xbtj-li2">
+            	   			<a href="" style="color: #524b48;" title="P30如此优秀的功能，错过不仅可惜，还…" target="_blank"><b></b>P30如此优秀的功能，错过不仅可惜，还…</a>
+            	   			<b></b>
+            	   		</li>
+            	   		<li class="xbtj-li2">
+            	   			<a href="" style="color: #524b48;" title="为什么不早点告诉我手机这个功能，害我浪费" target="_blank"><b></b>为什么不早点告诉我手机这个功能，害我浪费</a>
+            	   			<b></b>
+            	   		</li>
+            	   	</ul>
+            	   </div>
+            	</div>
+            </div>
+            <!-- 版块推荐 -->
+            <div class="block-1438">
+            <div class="block-1438-content">
+            <div class="hbwir-reco hbwir-frame">
+            
+            <h3>版块推荐</h3>
+           <div class="hbw-sect mkclearfix">
+           <a class="ellips" href="">荣耀20系列</a>
+           <a class="ellips" href="">华为P30系列</a>
+           <a class="ellips" href="">荣耀V20</a>
+           <a class="ellips" href="">华为mate20</a> <a class="ellips" href="">荣耀9X</a>
+           <a class="ellips" href="">华为P20</a>
+           <a class="ellips" href="">荣耀20i</a>
+           <a class="ellips" href="">华为nova5系列</a>
+           <a class="ellips" href="">荣耀智慧屏</a>
+           <a class="ellips" href="">华为AI音箱</a> 
+            </div>
+            <p class="hbwir-readall">
+            <a href="">查看论坛全部版块 
+            <b class="marw">&gt;&gt;</b></a>
+            </p>
+        </div>
+        </div>
+        </div>
+
+
+
+       <div class="block-1438">
+            <div class="block-1438-content">
+            <div class="hbwir-reco hbwir-frame">
+            
+            <h3>热门标签</h3>
+           <div class="hbw-sect mkclearfix">
+          <a class="ellips" href="">用户组申请</a>
+            <a class="ellips" href="">花粉漫谈</a>
+            <a class="ellips" href="">华为商城</a>
+            <a class="ellips" href="">EMUI专区</a>
+            <a class="ellips" href="">社区百科</a>
+            <a class="ellips" href="">二手交易</a>
+            <a class="ellips" href="">建议/申诉</a> 
+            <a class="ellips" href="">主题爱好者</a> 
+            </div>
+            <p class="hbwir-readall">
+            <a href="">查看更多
+            <b class="marw">&gt;&gt;</b></a>
+            </p>
+        </div>
+        </div>
+        </div>
+<!-- 视频 -->
+
+    <style>
+   .ssr-item .vbr-cover {
+    background:url('../img/视频图片1.png') 150px 150px 150px 150px repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    }
+    .hbwir-tools li, .vbr-cover i {
+    background:url('../img/i.png');
+    background-position:-5px -106px -68px -168px;
+    background-repeat: no-repeat;
+    }
+    .sscs-dot {
+    width: 7px;
+    height: 7px;
+    background-position: -100px -50px;
+    display: inline-block;
+    margin-right: 4px;
+    cursor: default;
+    text-decoration: none;
+    color: #7c7c7c;
+    cursor: pointer;
+    background-image:url('../img/原点.png');
+    background-position:-98px -48px -108px -58px;
+    background-repeat: no-repeat;
+    }
+   
+    </style>
+    <!-- 视频板块 -->
+   <!--  <div id="portal_block_1253" class="block move-span"> -->
+    <!-- <div id="portal_block_1253_content" class="dxb_bc"> -->
+   <!--  <div class="hbwir-slide hbwir-frame">
+     <div class="ss-reel"> -->
+     <!-- <div class="ssr-item cur">
+              <div class="hideA">
+              <a  href="">一分钟回顾“屏行世界”</a>
+              </div>
+              <a class="vbr-lk" href="">
+              <img src="../img/视频图片1.png" width="258" height="150" alt="">
+              <span class="vbr-cover"><i></i></span>
+              </a>
+     </div> -->
+     <!-- <div class="ssr-item">
+              <div class="hideA">
+              <a  href="">你好荣耀智慧屏！一起来为智慧屏疯狂打call</a>
+              </div>
+              <a class="vbr-lk" href="">
+              <img src="" />
+              <span class="vbr-cover"><i></i></span>
+              </a>
+
+     </div> -->
+    <!--  <div class="ssr-item">
+              <div class="hideA">
+              <a  href="">荣耀20Pro夜探火星基地，也是仪能力尽显无</a>
+              </div>
+              <a class="vbr-lk" href="">
+              <img src="" />
+              <span class="vbr-cover"><i></i></span>
+              </a>
+     </div> -->
+    <!--  <div class="ssr-item">
+              <div class="hideA">
+              <a  href="">花粉俱乐部7周年 | 余总送祝福，展望折叠屏</a>
+              </div>
+              <a class="vbr-lk" href="">
+              <img src="" />
+              <span class="vbr-cover"><i></i></span>
+              </a>
+     </div> -->
+    <!--  <div class="ssr-item">
+              <div class="hideA">
+              <a  href="">花粉俱乐部7周年 | 何刚总送祝福，在5G时代</a></div>
+              <a class="vbr-lk" href="">
+              <img src="" />
+              <span class="vbr-cover"><i></i></span>
+              </a>
+     </div> -->
+    <!--  <div class="ssr-item">
+              <div class="hideA">
+              <a  href="">祝#花粉俱乐部7周年#快乐！</a></div>
+              <a class="vbr-lk" href="">
+              <img src="" />
+              <span class="vbr-cover"><i></i></span>
+              </a>
+      </div> -->
+      <!-- </div> -->
+       <!--  <div class="ss-control">
+            <div class="ssc-sign">
+                <a href="" class="sscs-dot cur"></a>
+                <a href="" class="sscs-dot"></a>
+                <a href="" class="sscs-dot"></a>
+                <a href="" class="sscs-dot"></a>
+                <a href="" class="sscs-dot"></a>
+                <a href="" class="sscs-dot"></a>
+                </div>
+            <div class="ssc-dirbtn">
+                <a href="" class="sscs-forbtn">
+                <img src="../img/向右.png" alt="">
+                </a>
+                <a href="" class="sscs-bakbtn">
+                <img src="../img/向左.png" alt="">
+                </a>
+                
+            </div>
+        </div> -->
+    <!-- </div> -->
+   <!--  </div> -->
+	<!-- </div> -->
+	<div class="shipin">
+	<div class="shipin-main">
+		<video width="258" height="148" controls="controls">
+        <source src="video/视频1.mp4" type="video/mp4" />
+        </video>
+	</div>	
+	</div>
+
+
+<!-- 花粉女生 -->
+    <div id="portal_block_1258" class="block move-span">
+    <div id="portal_block_1258_content" class="dxb_bc">
+    <div class="hbwir-frame" style="overflow: hidden;">
+        <h2>花粉女生</h2>
+    <div class="hbwir-cont">
+        <a class="daren-block daren-featured" href="" 
+           style="width:258px;height:150px;">
+          <img class="imghf1  imghf1-bf" src="../img/花粉1.jpg" alt="【花粉女生】20s的夜景拍摄美爆，花粉女生-花粉俱乐部" width="258" height="150" title="【花粉女生】20s的夜景拍摄美爆" />
+          
+
+          
+        </a>
+        <div class="daren-sub mkclearfix">
+            <a class="daren-block  daren-block-2 " href="" style="width:129px;height:130px;margin-right: 3px;">
+
+            <img class="imghf2 imghf2-2" src="../img/花粉2.jpg" alt="【花粉女生】夏日清凉，花粉女生-花粉俱乐部" title="【花粉女生】夏日清凉" width="128" height="130"/>
+              
+           
+            </a>
+            <a class="daren-block  daren-block-3" href="" style="width:129px;height:130px;margin-right: 0;">
+            <img class="imghf3 imghf3-3" src="../img/花粉3.jpg" title="【花粉女生】最好的告别" alt="【花粉女生】最好的告别是下次见 ，花粉女生-花粉俱乐部" width="128" height="130"/>
+          
+            </a>
+      </div>
+    </div>
+    </div>
+    <style >
+  /*   .mh-on{
+    -webkit-backface-visibility:hidden;
+    -webkit-filter:blur(2px);
+    filter:blur(2px);
+    opacity:0.9;
+    } */
+    </style>
+
+    <script>
+    $(function(){
+    	$('.daren-featured').mouseover(function(event) {
+    			/* Act on the event */
+    		$('.imghf1').removeClass('imghf1')
+    	});
+    	$('.daren-featured').mouseleave(function(event) {
+    			/* Act on the event */
+    		$('.imghf1-bf').addClass('imghf1')
+    	});
+
+
+    		$('.daren-block-2').mouseover(function(event) {
+    			/* Act on the event */
+    			$('.imghf2').removeClass('imghf2')
+    		});
+    		$('.daren-block-2').mouseleave(function(event) {
+    			/* Act on the event */
+    			$('.imghf2-2').addClass('imghf2')
+    		});
+
+
+
+    		$('.daren-block-3').mouseover(function(event) {
+    			/* Act on the event */
+    			$('.imghf3').removeClass('imghf3')
+    		});
+    		$('.daren-block-3').mouseleave(function(event) {
+    			/* Act on the event */
+    			$('.imghf3-3').addClass('imghf3')
+    		});
+    	})
+    </script>
+    </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    </div> 
+
+    <div class="photo-1">
+    <img src="../img/蚂蚁.jpg" width="258"  alt="">
+    </div>
+
+    <div class="photo-1">
+    <img src="../img/夜景图.jpg" width="258"  alt="">	
+    </div>
+
+    <div class="photo-1">
+    <img src="../img/风光图.jpg" width="258"  alt="">	
+    </div>
+
+    <div class="photo-1">
+    <img src="../img/人文图.jpg" width="258"  alt="">	
+    </div>
+
+
+    </div>
+    </div>
+
+    <style>
+    	.di-one{
+    		width:100%;
+    		height:192px;
+    		float:left;
+    		background:white;
+    	}
+    	.di-h2{
+    	   font-size: 14px;
+           color: #333333;
+           padding: 13px 25px;
+           line-height: 1;
+           font-weight: normal;
+
+    	}
+    	.di-one-two{
+    		float:left;
+    		height: 100px;
+    		width: 700px;
+    		margin-top:10px;
+    		margin: 20px;
+    	}
+    	.di-one-two ul{
+    		list-style:none;
+    	}
+    	.di-one-two li{
+    		color: #7c7c7c;
+    		display:inline-block;
+    		cursor:pointer;
+    		font-size:14px;
+    		line-height:30px;
+    		margin-left:10px;
+    		font-weight: normal;
+    	}
+    	.di-one-three{
+    		float:right;
+    		background:green;
+    		width: 150px;
+    		height: 150px;
+    	}
+    	.di-one-two li:hover{
+    		color:#24b9bf;
+    	}
+    	.di-line{
+    		width:700px;
+    		border-bottom:1px solid #efefef;
+    	}
+
+    </style>
+     <div class="di-one">
+
+     <h2 class="di-h2">友情链接</h2>
+     <div class="di-line"></div>
+     <div class='di-one-two'>
+     	<ul>
+     		<li>荣耀官网</li>
+     		<li>华为商城</li>
+     		<li>华为消费者</li>
+     		<li>华为云</li>
+     		<li>应用云</li>
+     		<li>手机刷机</li>
+     		<li>华为手机寄修服务</li>
+     		<li>高清范</li>
+     		<li>应用汇雷锋网</li>
+     		<li>手机中国</li>
+     		<li>手机中国</li>
+     		<li>手机中国</li>
+     		<li>手机中国</li>
+     		<li>手机中国</li>
+     		<li>手机中国</li>
+     		<li>手机中国</li>
+     		<li>手机中国</li>
+     		<li>手机中国</li>
+     		<li>手机中国</li>
+     	</ul>
+     </div>
+     <div class="di-one-three">
+     	<img src="../img/底部二维码 (2).png" width="150" height="150" alt="">
+     </div>
+    	
+    </div>
+    </div>
+
+     <style>
+    .bottomm{
+    	position:relative;
+    width:980px;
+    height: 100px;
+/*     background:green; */
+    margin:0 auto;
+     }
+     .bottomm-one{
+     	text-align:center;
+     	width: 980px;
+     	height: 30px;
+     }
+     .bottomm em{
+     	left:10px;
+     	line-height:30px;
+     	font-weight: normal;
+        font-style: normal;
+     	color:#a2a2a2;
+     	font-size:12px;
+     	margin-left:10px;
+     }
+
+     .bottomm a{
+     	font-style:normal;
+     	text-decoration:none;
+     	font-size:12px;
+     	color:#a2a2a2;
+     }
+     b{
+     	font-size:0.5px;
+        font-weight: normal;
+        line-height: 30px;
+        margin: 0 3px;
+        color:#a2a2a2;
+     }
+     .bottomm use:hover{
+     	fill:#24b9bf;
+     }
+     .bottomm-two{
+     	width: 980px;
+     	height: 70px;
+     	text-align:center;
+     }
+     .bottomm-two  a:hover{
+     	color:#24b9bf;
+     }
+     .bottomm-one  a:hover{
+     	color:#24b9bf;
+     }
+     .erweima2 img{
+     	float:right;
+     }
+     </style>
+
+    <div class="bottomm">
+    	<div class="bottomm-one">
+    		<em>
+    			<a href="">用户协议</a>
+    			<b>|</b>
+    		</em>
+    		<em>
+    			<a href="">用户协议</a>
+    			<b>|</b>
+    		</em>
+    		<em>
+    			<a href="">用户协议</a>
+    			<b>|</b>
+    		</em>
+    		<em>
+    			<a href="">用户协议</a>
+    			<b>|</b>
+    		</em>
+    		<em>
+    			<a href="">用户协议</a>
+    			<b>|</b>
+    		</em>
+    		<em>举报邮箱：
+    		    <a href="">9527890@qq.com</a>
+    		    <b>|</b>
+    		</em>
+    		<em>
+    		关注花粉俱乐部：
+    		<svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-xinlangweibo1"></use>
+            </svg>
+    		</em>
+    		<em class="weixinerweima">
+    		<svg class="icon " aria-hidden="true">
+            <use xlink:href="#icon-weixin">
+            </use>
+            </svg>
+    		</em>
+    	</div>
+    	<div class="bottomm-two">
+    	 <div class="erweima2">
+    		<img  src="../img/微信二维码.png" alt="扫描二维码下载app">
+    	    </div>
+    		<em>
+    			<a href="">粤ICP备19015064号-4</a>
+    			<b>|</b>
+    		</em>
+    		<em>
+    			<a href="">备案主体编号：44201919072182</a>
+    			<b>|</b>
+    		</em>
+    		<em>
+    		<img src="../img/ghs.png" alt="">
+    			<a href="">粤公网安备 44190002003939号</a>
+    		</em>
+    		<p style="margin-top: 5px; font-size: 12px;     text-align: center;    color: #A2A2A2;">Copyright © 2012-2019 华为终端有限公司 版权所有</p>
+    	</div>
+
+    </div>
+    <style>
+    	.scrolltop svg:hover{
+    		color:#24b9bf;
+    	}
+    </style>
+
+
+    <script>
+    	$(function(){
+    		var b=$('.scrolltop').offset().top-$(window).height();
+				$(window).scroll(function(event) {
+					// 窗口滚动事件
+					// .scrollTop()  滚动条距离窗口顶部的距离
+					// console.log($(this).scrollTop());
+					if($(this).scrollTop()>400){
+						$('.scrolltop').css('display', 'block');
+					}else{
+						$('.scrolltop').css('display', 'none');
+					}
+
+
+				});
+    	})
+    </script>
+    <div class="scrolltop">
+   <svg class="icon huidaodingbu" aria-hidden="true" onclick="window.scrollTo('0','0')">
+        <use xlink:href="#icon-tubiao02"></use>
+
+        </svg>
+    </div>
+
+
+
+    </div>
+    </body>
+</html>

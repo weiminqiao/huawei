@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/iconfont.css">
+        <meta charset="utf-8">
+        <script src='../js/jquery-3.4.1.js'></script>
+        <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="../css/login.css">
+        <script>
+        	$(function(){
+        		$('.top-one').click(function(event) {
+        			$(this).css('color','#b40707');
+        			$(this).siblings('span').css('color','#333333');
+        			$('.box-mid').css('display','block');
+        			$('.qrcode').css('display','none');
+        		});
+        		$('.top-two').click(function(event) {
+        			$(this).css('color','#b40707');
+        			$(this).siblings('span').css('color','#333333');
+        			$('.box-mid').css('display','none');
+        			$('.qrcode').css('display','block');
+        		});
+
+        		
+        		$('.qrcode-img').mouseenter(function(event) {
+        			$(this).animate({
+        				'left':20+'px'
+        			}, 300)
+        			$('.qr-right').animate({
+        				'opacity':1
+        			}, 300)
+        		});
+        		$('.qr-main').mouseleave(function(event) {
+        			$('.qrcode-img').animate({
+        				'left':112+'px'
+        			}, 300)
+        			$('.qr-right').animate({
+        				'opacity':0
+        			}, 300)
+        		});
+        	})
+        </script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+    	<div class="main">
+    		<div class="top">
+    			<div class="top-center">
+    				<div class="logo">
+    					<img src="../img/HUAWEI.png" alt="">
+    				</div>
+    				<b>|</b>
+    				<p class="logotxt">华为商城</p>
+    	        </div>
+    		</div>
+    		<div class="warning">
+    				<span class="iconfont icon-yijianfankui">&nbsp;&nbsp;依据《网络安全法》，为保障您的帐号安全与正常使用，请尽快绑定您的手机号，感谢您的理解及支持！</span>
+    		</div>
+    		<div class="login">
+    			<div class="login-mid">
+    				<div class="login-box">
+    					<div class="box-top">
+    						<span class="top-one">账号登录</span>
+    						<span class="top-two">扫码登录</span>			
+    					</div>
+    					<div class="box-mid">
+    					 <div class="mid-one"></div>
+    					   <div class="mid-two">
+    					   		<ul class="mid-lis">
+    					   			<li class="lis-one">
+    					   				<input class="lis-txt" type="text"  placeholder="手机/邮件地址/华为号">
+    					   			</li>
+    					   			<li class="lis-one">
+    					   				<input class="lis-txt" type="text"  placeholder="密码">
+    					   			</li>
+    					   			<li class="lis-two">
+    					   				<a href="">
+    					   					<span class="iconfont icon-yijianfankui">&nbsp;&nbsp;短信验证码登录</span>
+    					   				</a>
+    					   			</li>
+    					   			<li class="lis-three">
+    									<p>登录</p>	
+    					   			</li>
+    					   			<li class="lis-four">
+    					   				
+    					   				<label for="checked"><input id='checked' type="checkbox">&nbsp;&nbsp;记住华为账号</label>
+
+    					   				 <p><a href="">更多</a></p>
+    					   			</li>
+    					   			<li class="lis-five">
+    					   				<div class="five-mid">
+    					   					 <span class="five-spanone"><a href="">注册账号</a></span>
+    					   					 <span class="five-spantwo"><a href="">忘记密码？</a></span>
+    					   				</div>
+    					   			</li>
+    					   		</ul>
+
+    					   		<div class="box-bottom">
+    						<div class="bottom-one">
+    							<i class="i-left"></i>
+    							<span>其他登录方式</span>
+    							<i class="i-right"></i>
+    						</div>
+    						<div class="bottom-two">
+    							<span  title="QQ"><a class="btwo-a" href=""></a></span>
+    							<span  title="支付宝"><a class="btwo-b" href=""></a></span>
+    							<span  title="微信"><a class="btwo-c" href=""></a></span>
+    						</div>
+    					    </div> 
+    					   </div>
+    					</div>
+
+    					<div class="qrcode">
+    						<div class="qr-main">
+    							<div class="qrcode-img">
+    								<img src="../img/qr2.png" alt="">
+    							</div>
+    						</div>
+    						<div class="qr-right">
+    							
+    						</div>
+    						<div class="qr-footer">
+    							<p>使用华为移动服务APP扫一扫</p>
+    							<p>若您使用华为手机,请进入"设置">"华为帐号"扫码登录。</p>
+    						</div>
+    					</div>
+    				</div>
+    				
+    			</div>
+    		</div>
+    	</div>
+    	<div class="footer"> 
+    		<div class="footer-center">
+    			<p class="fter-a">
+    				<a href="">华为账号与云空间用户协议</a>
+    				<span>|</span>
+    				<a href="">关于华为帐号与云空间隐私的声明</a>
+    				<span>|</span>
+    				<a href="">常见问题</a>
+    				<span>|</span>
+    				<a href="">Cookies</a>
+    			</p>
+    			<p class="fter-b">
+    				Copyright © 2011-2019  华为软件技术有限公司  版权所有  保留一切权利  苏B2-20070200号 | 苏ICP备09062682号-9
+    			</p>
+    		</div>		
+    	</div>
+    </body>
+    <script>
+    	
+    </script>
+</html>

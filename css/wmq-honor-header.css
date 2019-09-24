@@ -1,0 +1,339 @@
+/*
+* @Author: admin
+* @Date:   2019-09-17 10:43:54
+* @Last Modified by:   admin
+* @Last Modified time: 2019-09-23 18:21:26
+*/
+
+
+
+/*公用头部导航*/
+.container {
+	min-width: 1220px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.site-topbar{ 
+	min-width: 1220px;
+    width: 100%;
+    height: 30px; 
+    font-size: 14px; 
+    color: #fff; 
+    background: url(../img/topbar-bg.gif) repeat-x #fff; 
+    position: absolute;
+    top: 0;  
+    z-index: 10;
+}
+.site-topbar .topbar-nav,
+.site-topbar .topbar-info{
+ float: right; 
+ height: 30px; 
+ line-height: 30px; 
+ overflow: hidden;
+}
+.site-topbar a{ 
+    color: #fff;
+    text-decoration: none;
+}
+.site-topbar .rep{ 
+    font-size: 13px; 
+    margin: 0 5px;
+}
+.site-topbar .topbar-info{ 
+    margin-left: 50px;
+}
+.site-topbar .topbar-info .icon-user i{ 
+    font-size: 12px; 
+}
+
+.site-header{ 
+	min-width: 1220px;
+    width: 100%; 
+    height: 60px; 
+    background-color: #fff; 
+    position: absolute; 
+    top: 30px; 
+    -webkit-box-shadow: 0 5px 5px rgba(0,0,0,0.05); 
+    box-shadow: 0 5px 5px rgba(0,0,0,0.05); 
+    z-index: 10;
+}
+.site-header .header-logo{ 
+    float:left;
+    width:106px; 
+    height: 22px;
+    margin-top:19px;
+}
+.site-header .header-nav{
+    float:left;
+    width:760px;
+    margin-left: 40px;
+}
+
+.site-header .header-search{
+	float:right;
+	width:220px; 
+    height: 32px;
+    border:2px solid #959595;
+    border-radius: 30px;
+    margin-top:15px;
+}
+.site-header .header-search:focus{
+	outline:none;
+}
+.site-header .logo{
+	margin-top:-15px;
+	position:relative;
+	display:block;
+	width:200px;
+	height:50px;
+	overflow:hidden;
+	background:url(../img/logo-honor.png) no-repeat;
+}
+.site-header .logo:focus{
+	outline:0;
+}
+.site-header .nav-list{
+	position:relative;
+	z-index:10;
+	width:100%;
+	height:60px;
+	margin:0;
+	list-style-type:none;
+	font-size:16px;
+}
+.site-header .nav-item{
+	float:left;
+
+}
+.site-header .nav-item a,
+.site-header .header-nav-menu .children-list dt a,
+.site-header .header-nav-menu .children-list dd a,
+.site-header .search-form .keyword-list li a,
+.site-header .search-hot-words a
+{
+	text-decoration:none;
+}
+.site-header .nav-item .link{
+     display:block;
+     height: 60px;
+     line-height: 60px;
+     color:#909090;
+     border-bottom: 3px solid transparent;
+     font-size: 16px;
+     padding: 0 15px;
+     margin: 0 15px;
+  }
+
+.site-header .nav-item .link:focus{
+	outline:0;
+}
+.site-header .nav-item .link:hover, 
+.site-header .nav-item .link.active{ 
+	border-bottom-color: #19bae5;
+}
+.site-header .nav-item .item-children{
+	display:block;
+}
+.site-header .nav-item-active{
+	position:relative;
+}
+
+.site-header .header-nav-menu{
+	display:none;
+	position:absolute;
+	top:60px;
+	left:0;
+	z-index:24;
+	width:100%;
+	height:276px; 
+	padding: 35px 0;
+    background-image: -moz-linear-gradient(top, #017acd, #00b7e1);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#017acd), to(#00b7e1));
+    background-image: -webkit-linear-gradient(top, #017acd, #00b7e1);
+    background-image: -o-linear-gradient(top, #017acd, #00b7e1);
+    background-image: linear-gradient(to bottom, #017acd, #00b7e1);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#017acd', endColorstr='#00b7e1', GradientType=0);
+} 
+.site-header .header-nav-menu .children-list{ 
+ 	width:174px;  		
+	display: block;  	
+	float: left; 
+
+    padding-left: 25px ; 
+	margin: auto 5px;
+} 
+
+.site-header .header-nav-menu .children-list :hover .site-header .header-nav-menu .children-list dd a{
+	color:red;
+
+}
+.site-header .header-nav-menu .children-list dt{ 	
+	position:relative;  	
+	font-size: 18px;  	
+	font-weight:normal;  	
+	line-height: 26px;  	
+	color: #fff; 
+} 
+.site-header .header-nav-menu .children-list dt a{ 	
+	cursor: pointer;
+	color:#ffffff; 
+} 
+.site-header .header-nav-menu .children-list dt:before{ 	
+	width: 0;  	
+	height: 0;  	
+	content: '';  	
+	border-top: 5px solid transparent;  	
+	border-bottom: 5px solid transparent;  	
+	border-left: 5px solid #fff;  	
+	position: absolute;  	
+	left: -12px;  	
+	top: 6px; 	
+	z-index:1; 
+} 
+.site-header .header-nav-menu .children-list dd{  	
+	margin: 20px 0 0 0; 
+}
+.site-header .header-nav-menu .children-list dd a{  	
+	font-size: 14px;  	
+	line-height: 20px;  	
+	color: #fff; 
+}
+.site-header .header-nav-menu .children-list.last{  	
+	width:330px;  	
+	border-left: 1px solid rgba(255,255,255,.5);  	
+	padding-left: 35px; 
+}
+.site-header .header-nav-menu-active{
+	border-bottom:1px solid #e0e0e0\9;
+	-webkit-box-shadow:0 3px 4px rgba(0,0,0,.18);
+	box-shadow:0 3px 4px rgba(0,0,0,.18);
+	-webkit-transition:-webkit-box-shadow .2s;
+	transition:box-shadow .2s;
+}
+
+.site-header .search-form{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+.site-header .search-form .keyword-list{
+	position:absolute;
+	left:15px;
+	top:31px;
+	z-index:20;
+	width:230px;
+	border:1px solid #e0e0e0;
+	border-top:0;
+	background:#fff;
+	display: none;
+}
+
+.site-header .search-form .keyword-list ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.site-header .search-form .keyword-list li.active,
+.site-header .search-form .keyword-list li:hover{
+	background:#fafafa;
+}
+.site-header .search-form .keyword-list li a{
+	position:relative;
+	display:block;
+	padding:6px 15px;
+	font-size:12px;
+	color:#424242;
+}
+.site-header .search-form .keyword-list li .result{
+	position:absolute;
+	right:15px;
+	top:6px;
+	color:#b0b0b0;
+}
+.site-header .search-form-focus .keyword-list{
+	border-color:#b0b0b0;
+}
+.site-header .search-form:hover{
+	border-color:#b0b0b0;
+}
+.site-header .search-text{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	width:200px;
+	height:20px;
+	padding:0 15px;
+	font-size:14px;
+	line-height:20px;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+	outline:none;
+}
+
+// 去掉input搜索框的默认样式
+#search{
+	border:none;
+	outline:none;
+	background:transparent;
+}
+#search:focus{
+	outline:none;
+	background:transparent;
+	border:none;
+}
+.site-header .search-form input{
+	outline:none;
+	border:none;
+	overflow:hidden;
+}
+
+.site-header .search-btn{
+	position:absolute;
+	right:10px;
+	top:5px;
+	z-index:2;
+	width:20px;
+	height:20px;
+	display: block;
+	background:url(../img/icon-search-30.png) no-repeat; 
+	background-size:100% 100%;
+	outline:0;
+	border:0;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+}
+.site-header .search-hot-words{
+	position:absolute;
+	top:5px;
+	right:35px;
+	z-index:2;
+	text-align:right;
+}
+
+
+.site-header .search-hot-words a{
+	display:inline-block;
+	line-height:20px;
+	margin-left:5px;
+	padding:0 5px;
+	font-size:12px;
+	background:#eee;
+	border-radius:3px;
+	color:#707070;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+}
+.site-header .search-hot-words a:hover{
+	background:#19bae5;
+	color:#fff;
+	text-decoration:none;
+}

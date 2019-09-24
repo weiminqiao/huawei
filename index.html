@@ -1,0 +1,2927 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="css/iconfont.css">
+        <meta charset="utf-8">
+        <script src='js/jquery-3.4.1.js'></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <script>
+        	$(function(){
+        		$('.nli').children('li').eq(7).mouseover(function(event) {
+        				$(this).css('background','white');
+        				$('#spone').attr('class','iconfont icon-jiantou_down');
+						$(this).children('.nli-one').slideDown('fast');
+					});
+				$('.nli').children('li').eq(7).mouseleave(function(event) {
+						$(this).css('background','#f9f9f9');
+						$('#spone').attr('class','iconfont icon-jiantou_up');
+						$('.nli-one').slideUp('fast');
+					});
+
+				$('.nlis').children('li').eq(3).mouseover(function(event) {
+        				$(this).css('background','white');
+        				$('#sptwo').attr('class','iconfont icon-jiantou_down');
+						$(this).children('.nlis-one').slideDown(1);
+					});
+				$('.nlis').children('li').eq(3).mouseleave(function(event) {
+						$(this).css('background','#f9f9f9');
+						$('#sptwo').attr('class','iconfont icon-jiantou_up');
+						$('.nlis-one').slideUp(1);
+					});
+
+
+
+				$('.nlis').children('li').eq(4).mouseover(function(event) {
+        				$(this).css('background','white');
+        				$('#spthree').attr('class','iconfont icon-jiantou_down');
+						$(this).children('.nlis-two').slideDown(1);
+					});
+				$('.nlis').children('li').eq(4).mouseleave(function(event) {
+						$(this).css('background','#f9f9f9');
+						$('#spthree').attr('class','iconfont icon-jiantou_up');
+						$('.nlis-two').slideUp(1);
+					});
+
+				$('.nlis').children('li').eq(5).mouseover(function(event) {
+        				$(this).css('background','white');		
+						$(this).children('.nlis-three').slideDown(1);
+					});
+				$('.nlis').children('li').eq(5).mouseleave(function(event) {
+						$(this).css('background','#f9f9f9');
+						$('.nlis-three').slideUp(1);
+					});
+
+				$('.nlis').children('li').eq(6).mouseover(function(event) {
+        				$(this).css('background','white');		
+						$(this).children('.nlis-four').slideDown(1);
+					});
+				$('.nlis').children('li').eq(6).mouseleave(function(event) {
+						$(this).css('background','#f9f9f9');
+						$('.nlis-four').slideUp(1);
+					});
+
+
+				$('.classify-lis').children('li').eq(0).mouseover(function(event) {
+        				$(this).css('background','white');		
+						$(this).children('.classifyphone').slideDown(1);
+					});
+				$('.classify-lis').children('li').eq(0).mouseleave(function(event) {
+						$(this).css('background','');
+						$('.classifyphone').slideUp(1);
+					});
+				$('.classify-lis').children('li').eq(1).mouseover(function(event) {
+        				$(this).css('background','white');		
+						$(this).children('.classifyppc').slideDown(1);
+					});
+				$('.classify-lis').children('li').eq(1).mouseleave(function(event) {
+						$(this).css('background','');
+						$('.classifyppc').slideUp(1);
+					});
+				$('.classify-lis').children('li').eq(2).mouseover(function(event) {
+        				$(this).css('background','white');		
+						$(this).children('.capacity').slideDown(1);
+					});
+				$('.classify-lis').children('li').eq(2).mouseleave(function(event) {
+						$(this).css('background','');
+						$('.capacity').slideUp(1);
+					});
+				$('.classify-lis').children('li').eq(3).mouseover(function(event) {
+        				$(this).css('background','white');		
+						$(this).children('.house').slideDown(1);
+					});
+				$('.classify-lis').children('li').eq(3).mouseleave(function(event) {
+						$(this).css('background','');
+						$('.house').slideUp(1);
+					});
+				$('.classify-lis').children('li').eq(4).mouseover(function(event) {
+        				$(this).css('background','white');		
+						$(this).children('.parts').slideDown(1);
+					});
+				$('.classify-lis').children('li').eq(4).mouseleave(function(event) {
+						$(this).css('background','');
+						$('.parts').slideUp(1);
+					});
+				$('.classify-lis').children('li').eq(5).mouseover(function(event) {
+        				$(this).css('background','white');		
+						$(this).children('.rests').slideDown(1);
+					});
+				     $('.classify-lis').children('li').eq(5).mouseleave(function(event) {
+						$(this).css('background','');
+						$('.rests').slideUp(1);
+					});
+
+				var num = 0;
+        		var timer;
+        		var a=0;
+        		var ber=0;
+
+        		function go(){
+
+        			timer=setInterval(function(){
+        				num++;
+        				
+        				if(num>6){
+        					num=0;
+        					$('#hot-uls').css('margin-left',-1351*num+'px');
+        					num=1;
+        				}
+        				$('#hot-uls').animate({
+        					'margin-left':-1351*num+'px'
+        				}, 1000)
+
+
+        				ber++;
+
+        				$('.hot-lis').children('li').siblings('li').removeClass('selected');
+
+        				if(ber>5){
+        					ber=0;
+        				}
+        				$('.hot-lis').children('li').eq(ber).addClass('selected');
+
+        			},4000)
+        		}
+
+        		go();
+
+        		$('.hot').mouseenter(function(event) {
+        			clearInterval(timer);
+        		});
+
+        		$('.hot').mouseleave(function(event) {
+        			go();
+        		});
+        		    
+        		$('#hot-left').click(function(event) {
+        				num--;
+        				if(num<0){
+        					num=6;
+        					$('#hot-uls').css('margin-left',-1351*num+'px');
+        					num=5;
+        				}
+        				$('#hot-uls').animate({
+        					'margin-left':-1351*num+'px'
+        				}, 300)
+
+        				ber--;
+        				$('.hot-lis').children('li').siblings('li').removeClass('selected');
+        				if(ber<0){
+        					ber=5;
+        				}
+        				$('.hot-lis').children('li').eq(ber).addClass('selected');
+        			});
+
+        		$('#hot-right').click(function(event) {
+        				num++; 
+        				if(num>6){
+        					num=0;
+        					$('#hot-uls').css('margin-left',-1351*num+'px');
+        					num=1;	
+        				}
+        				$('#hot-uls').animate({
+        					'margin-left':-1351*num+'px'
+        				}, 300)
+
+        				ber++;
+        				$('.hot-lis').children('li').siblings('li').removeClass('selected');
+        				if(ber>5){
+        					ber=0;
+        				}
+        				$('.hot-lis').children('li').eq(ber).addClass('selected');
+        			});
+
+        		$('.hot-lis').children('li').click(function(event) {
+        			$(this).addClass('selected');
+        			$(this).siblings('li').removeClass('selected');
+        			a = $(this).index();
+        			num=a;
+                    ber=a;
+        			$('#hot-uls').animate({
+        					'margin-left':-1351*num+'px'
+        				}, 1000)
+        		});
+
+        		var ab=0;	
+        		$('.bb-moveright').click(function(event) {
+        			ab++;
+        			$('.bb-moveleft').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.bb-lis').animate({
+        				'margin-left':-1210*ab+'px'
+        			}, 300)	
+        		});
+        		$('.bb-moveleft').click(function(event) {
+        			ab--;
+        			$('.bb-moveright').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.bb-lis').animate({
+        				'margin-left':-1210*ab+'px'
+        			}, 300)	
+        		});
+
+
+        		var ag=0;	
+        		$('.ssbr1').click(function(event) {
+        			ag++;
+        			$('.ssbl1').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.ssblis1').animate({
+        				'margin-left':-1210*ag+'px'
+        			}, 300)	
+        		});
+        		$('.ssbl1').click(function(event) {
+        			ag--;
+        			$('.ssbr1').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.ssblis1').animate({
+        				'margin-left':-1210*ag+'px'
+        			}, 300)	
+        		});
+
+
+        		var aq=0;	
+        		$('.ssbr2').click(function(event) {
+        			aq++;
+        			$('.ssbl2').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.ssblis2').animate({
+        				'margin-left':-1210*aq+'px'
+        			}, 300)	
+        		});
+        		$('.ssbl2').click(function(event) {
+        			aq--;
+        			$('.ssbr2').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.ssblis2').animate({
+        				'margin-left':-1210*aq+'px'
+        			}, 300)	
+        		});
+
+        		var ae=0;	
+        		$('.ssbr3').click(function(event) {
+        			ae++;
+        			$('.ssbl3').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.ssblis3').animate({
+        				'margin-left':-1210*ae+'px'
+        			}, 300)	
+        		});
+        		$('.ssbl3').click(function(event) {
+        			ae--;
+        			$('.ssbr3').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.ssblis3').animate({
+        				'margin-left':-1210*ae+'px'
+        			}, 300)	
+        		});
+
+
+        		var ar=0;	
+        		$('.ssbr4').click(function(event) {
+        			ar++;
+        			$('.ssbl4').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.ssblis4').animate({
+        				'margin-left':-1210*ar+'px'
+        			}, 300)	
+        		});
+        		$('.ssbl4').click(function(event) {
+        			ar--;
+        			$('.ssbr4').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.ssblis4').animate({
+        				'margin-left':-1210*ar+'px'
+        			}, 300)	
+        		});
+
+        		var az=0;	
+        		$('.ssbr5').click(function(event) {
+        			az++;
+        			$('.ssbl5').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.ssblis5').animate({
+        				'margin-left':-1210*az+'px'
+        			}, 300)	
+        		});
+        		$('.ssbl5').click(function(event) {
+        			az--;
+        			$('.ssbr5').css('display', 'block');
+        			$(this).css('display', 'none');
+        			$('.ssblis5').animate({
+        				'margin-left':-1210*az+'px'
+        			}, 300)	
+        		});
+
+
+
+
+        		
+
+
+
+
+        		$('.move-top').click(function(event) {
+					$('html,body').animate({
+						'scrollTop':'0px'
+					},300)
+				});
+
+			var anum=0;
+			var aber=0;
+			var timer2;
+			function go2(){
+				timer2=setInterval(function(){
+					anum++;
+					if(anum>8){
+						anum=0;
+					}
+
+					if(anum<$('.ht-uls').children('li').length){
+						console.log();
+						$('.ht-uls').children('li').eq(anum).siblings('li').removeClass('selected');
+						$('.ht-uls').children('li').eq(anum).addClass('selected');
+					}
+
+					    aber++;
+        				$('.ht-list').children('span').siblings(aber).removeClass('currsored');
+        				if(aber>8){
+        					aber=0;
+        				}
+        				$('.ht-list').children('span').eq(aber).addClass('currsored');
+				},3000)
+			}
+			   go2();
+   
+			   $('.openlogin').click(function(event) {
+			   	$('.login').css('display', 'block');
+			   });
+			   $('.lgtopx').click(function(event) {
+			   	$('.login').css('display', 'none');
+			   });
+   
+			   $('.top-one').click(function(event) {
+        			$(this).css('color','#b40707');
+        			$(this).siblings('span').css('color','#333333');
+        			$('.box-mid').css('display','block');
+        			$('.qrcode').css('display','none');
+        		});
+        		$('.top-two').click(function(event) {
+        			$(this).css('color','#b40707');
+        			$(this).siblings('span').css('color','#333333');
+        			$('.box-mid').css('display','none');
+        			$('.qrcode').css('display','block');
+        		});
+
+        		
+        		$('.qrcode-img').mouseenter(function(event) {
+        			$(this).animate({
+        				'left':20+'px'
+        			}, 300)
+        			$('.qr-right').animate({
+        				'opacity':1
+        			}, 300)
+        		});
+        		$('.qr-main').mouseleave(function(event) {
+        			$('.qrcode-img').animate({
+        				'left':112+'px'
+        			}, 300)
+        			$('.qr-right').animate({
+        				'opacity':0
+        			}, 300)
+        		});
+
+        		    $('.adtb').click(function(event) {
+        			$('.advertising').css('display', 'none');
+        		   });
+
+
+        		    var ntimer;
+        		    var nnum=0;
+
+        		    function go3(){
+        		    ntimer=setInterval(function(){
+					nnum++;
+					if(nnum>6){
+						nnum=0;
+						$('.notice-lis').css('margin-top',-42*nnum+'px');
+        				nnum=1;
+					}
+
+					if(nnum<$('.notice-lis').children('li').length){
+						$('.notice-lis').animate({
+							'margin-top':-42*nnum+'px'
+						}, 100)
+					}
+
+				   	},3000)
+        		  }
+        		  go3();
+        		  $('.notice-right').mouseenter(function(event) {
+        		  		clearInterval(ntimer);
+        		  });
+        		  $('.notice-right').mouseleave(function(event) {
+        		  		go3();
+        		  });
+
+        		  $('.bbt').mouseenter(function(event) {
+        		  	$('.weixin').children('span').css('display', 'block');
+        		  	$('.weixin').css('display', 'block');
+        		  });
+        		  $('.bbt').mouseleave(function(event) {
+        		  	$('.weixin').children('span').css('display', 'none');
+        		  	$('.weixin').css('display', 'none');
+        		  });
+
+
+        		  $(window).scroll(function(event) {
+        			if($(this).scrollTop()>400){
+        				$('.move-top').css('display', 'block');
+        			}else{
+        				$('.move-top').css('display', 'none');
+        			}
+        		});
+
+
+             })
+        </script>
+        
+    </head>
+    <body>
+
+    	<!-- 头部可删除广告栏 -->
+    	<div class="advertising">
+    		<a class="adta" href="#">
+    			<img src="img/advertising.jpg" alt="">
+    		</a>
+    		<a class="adtb" href="#">X</a>
+    	</div>
+    	<!-- 头部可删除广告栏  -->
+
+    	<!-- 导航栏 -->
+    	<div class="navigation">
+    		<div class="center">
+    			<div class="nleft">
+    				<ul class="nli">
+    					<li><a href="index.html">首页</a></li>
+    					<li><a href="page/huawei.html">华为官网</a></li>
+    					<li><a href="page/wmq-honor-index.html">荣耀官网</a></li>
+    					<li><a href="page/huafuns.html">花粉俱乐部</a></li>
+    					<li><a href="#">V码(优购码)</a></li>
+    					<li><a href="page/companygo.html">企业购</a></li>
+    					<li><a href="#">Select Region</a></li>
+    					<li><a href="#">更多精彩<span id='spone' class="iconfont icon-jiantou_up"></span></a>
+    					<div class="nli-one">
+    						<dl>
+    							<dt><a href="#">EMUI</a></dt>
+    							<dt><a href="#">应用市场</a></dt>
+    							<dt><a href="#">华为终端云空间</a></dt>
+    							<dt><a href="#">开发者联盟</a></dt>
+    						</dl>
+    					</div>
+    					</li>	
+    				</ul>
+    			</div>
+    			<div class="nright">
+    				<ul class="nlis">
+    					<li><a class="openlogin" href="page/login.html">请登录</a></li>
+    					<li><a href="#">注册</a></li>
+    					<li><a href="#">我的订单</a></li>
+    					<li><a href="#">客户服务<span id='sptwo' class="iconfont icon-jiantou_up"></span></a>
+    					<div class="nlis-one">
+    						<dl>
+    							<dt><a href="#">客服中心</a></dt>
+    							<dt><a href="#">联系客服</a></dt>
+    						</dl>
+    					</div>
+    					</li>
+    					<li><a href="#">网站导航<span id='spthree' class="iconfont icon-jiantou_up"></span></a>
+    					<div class="nlis-two">
+    						<div class="wone">
+    					 		<a href="#">
+    					 			<span class="iconfont icon-fangzi"></span>
+    					 			<div>商城首页</div>
+    					 		</a>
+    					 	</div>
+    					 	<div class="wtwo">
+    							<div class='a1'>频道</div>
+    								<div class="f1">
+    									<div>华为专区</div>
+    									<a href="page/wmq-honor-prefecture.html"><div>荣耀专区</div></a>
+    									<a href="page/companygo.html"><div>企业购</div></a>
+    								</div>
+    					 	</div>
+    					 	<div class="wthree">
+    					 		<div class='a1'>产品</div>
+    								<div class="f1">
+    									<div>手机</div>
+    									<div>智能家居</div>
+    									<div>平板&笔记本</div>
+    									<div>通用配件</div>
+    									<div>智能穿戴</div>
+    									<div>专属配件</div>
+    								</div>
+    					 	</div>
+    					 	<div class="wfour">
+    					 	<div class='a1'>增值服务</div>
+    								<div class="f1">
+    									<div>以旧换新</div>
+    									<div>产品包装</div>
+    									<div>补够保障</div>
+    									<div>一口气换电池</div>
+    								</div>
+    					 		
+    					 	</div>
+    					 	<div class="wfive">
+    					 	<div class='a1'>会员</div>
+    								<div class="f1">
+    									<div>会员频道</div>
+    								</div>
+    					 	</div>
+    					</div>
+    					</li>
+    					<li><a href="#">手机版</a>
+    					<div class="nlis-three">
+    						<div class="phone">
+    							<div class='phonel'>
+    								<div class='phonell'>
+    									<img class="img-phone" src="img/phone1.png" alt="">
+    									<div class="phone-div">
+    										<h2>华为商城APP</h2>
+    										<p class="red">新人专享好礼<br>
+    										最高5000积分
+    										</p>
+    										<span class="iconfont icon-anzhuo"></span>
+    										<span class="iconfont icon-weixin"></span>
+    									</div>
+    								</div>
+    							</div>
+    							<div class='phonel'>
+    								<div class='phonell'>
+    									<img class="img-phone" src="img/phone2.jpg" alt="">
+    									<div class="phone-div">
+    										<h2>华为商城公众号</h2>
+    										<p class="red">微信扫一扫</p>
+    										<span class="iconfont icon-weixin"></span>
+    									</div>
+    								</div>
+    							</div>
+    							<div class='phonel'>
+    								<div class='phonell'>
+    									<img class="img-phone" src="img/phone3.jpg" alt="">
+    									<div class="phone-div">
+    										<h2>微信小程序</h2>
+    										<span class="iconfont icon-weixin"></span>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					</li>
+    					<li><a href="#"><span class="iconfont icon-cart_icon">&nbsp;</span>购物车(0)</a>
+    					<div class="nlis-four">
+    						<div class='car'>
+    							<span class="car-sp iconfont icon-cart_icon"></span>
+    							<p class="">您的购物车是空的，赶紧选购吧~</p>
+    						</div>
+    					</div>
+    					</li>
+    				</ul>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- 导航栏结束 -->
+
+    	<!-- logo行 -->
+    	<div class="logo">
+    		<div class="logo-center">
+    			
+    			<div class="logo-left">
+    				<div class="logo-div">
+    					<a href="#">
+    						<img src="img/logo.png" alt="">
+    					</a>
+    				</div>
+    				<div class="naver">
+    					<ul class="lis-naver">
+    						<li><a href="#">
+    							<img src="img/naver1.png" alt="">
+    						</a></li>
+    						<li><a href="page/wmq-honor-prefecture.html">
+    							<img src="img/naver2.png" alt="">
+    						</a></li>
+    						<li><a href="#">华为5G</a></li>
+    						<li><a href="#">荣耀20</a></li>
+    						<li><a href="page/华为Mate30.html">华为P30</a></li>
+    						<li><a href="#">荣耀9X</a></li>
+    					</ul>
+    				</div>
+    			
+    			</div>	
+    				<div class="logo-right">
+    				    <div class="logo-box">
+    					 <input type="text" id='logo-input'>
+    					 <input type=" submit" id='logo-buttom' value="">
+    					 <span class="iconfont icon-sousuo"></span>
+    					</div>
+    					<div class="logo-key">
+    						<a class="logo-one" href="#">荣耀Play3</a>
+    						<a class="logo-two" href="#">5G</a>
+    					</div>
+    				</div>
+    		</div>
+    	</div>
+    	<!-- logo行结束 -->
+
+    	
+
+    	<!-- 轮播图开始 -->
+    	<div class="hot" id="hot">
+
+            <ul class="hot-uls" id="hot-uls">
+				<li><img src="img/hota.jpg" alt=""></li>
+				<li><img src="img/hotb.jpg" alt=""></li>
+				<li><img src="img/hotc.jpg" alt=""></li>
+				<li><img src="img/hotd.jpg" alt=""></li>
+				<li><img src="img/hote.jpg" alt=""></li>
+				<li><img src="img/hotf.jpg" alt=""></li>
+				<li><img src="img/hota.jpg" alt=""></li>
+			</ul>
+
+			<!-- 分类框开始 -->
+    		<div class="classify">
+    			<ol class="classify-lis">
+    				<li class="classify-one">
+    					<div class="claone">
+    						<div class="clatwo">
+    							<a href="#">手机</a>
+    						</div>						
+    							<a href="#" class="cla">荣耀</a>
+    							<a href="#" class="cla">HUAWEI P系列</a>
+    					</div>
+    					<div class="classifyphone">
+    						<div class="cp-center">
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+    							<div class="cplis-two">
+    								<div>
+    									<a href="#">查看全部</a>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    				</li>
+    				<li class="classify-two">
+    					<div class="claone">
+    						<div class="clatwo">
+    							<a href="#">笔记本 & 平板</a>
+    						</div>						
+    							<a href="#" class="cla">平板电脑</a>
+    							<a href="#" class="cla">笔记本电脑</a>
+    					</div>
+    					<div class="classifyppc">
+    						<div class="cpp-center">
+    							<ul class="cpplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li class="cpplis-last"><a href="#">查看全部</a></li>
+    							</ul>
+    						</div>
+    					</div>
+    				</li>
+    				<li class="classify-two">
+    					<div class="claone">
+    						<div class="clatwo">
+    						<a href="#">智能穿戴</a>
+    						</div>						
+    							<a href="#" class="cla">手环</a>
+    							<a href="#" class="cla">手表</a>
+    							<a href="#" class="cla">VR</a>	
+    					</div>
+    					<div class="classifyppc capacity">
+    						<div class="cpp-center">
+    							<ul class="cpplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li class="cpplis-last"><a href="#">查看全部</a></li>
+    							</ul>
+    						</div>
+    					</div>
+    				</li>
+    				<li class="classify-two">
+    					<div class="claone">
+    						<div class="clatwo">
+    						<a href="#">智能家居 & 智慧屏</a>
+    						</div>						
+    							<a href="#" class="cla">智慧屏</a>
+    							<a href="#" class="cla">路由器</a>
+    							<a href="#" class="cla">照明</a>
+    							
+    					</div>
+    					<div class="classifyphone house">
+    						<div class="cp-center house-center">
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<div class="cplis-two">
+    								<div>
+    									<a href="#">查看全部</a>
+    								</div>
+    							</div>
+    							</ul>
+    							
+    						</div>
+    					</div>
+    				</li>
+    				<li class="classify-two">
+    					<div class="claone">
+    						<div class="clatwo">
+    							<a href="#">热销配件</a>
+    						</div>						
+    							<a href="#" class="cla">保护壳</a>
+    							<a href="#" class="cla">移动电源</a>
+    							<a href="#" class="cla">耳机</a>
+    					</div>
+    					<div class="classifyphone house parts">
+    						<div class="cp-center house-center">
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+    							<div class="cplis-two">
+    								<div>
+    									<a href="#">查看全部</a>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    				</li>
+    				<li class="classify-three">
+    					<div class="claone">
+    						<div class="clatwo">
+    							<a href="#">增值服务&其他</a>
+    						</div>						
+    							<a href="#" class="cla">服务器</a>
+    							<a href="#" class="cla">增值卡</a>
+    					</div>
+    					<div class="classifyphone  rests">
+    						<div class="cp-center">
+    							<ul class="cplis-one">
+    								<li><a href="#"><img class="cplis-img" src="img/nphone1.png" alt=""><span class="cpan">荣耀</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone2.png" alt=""><span class="cpan">HUAWEI P系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone3.png" alt=""><span class="cpan">HUAWEI Mate系列</span></a></li>
+    								<li><a href="#"><img class="cplis-img" src="img/nphone4.png" alt=""><span class="cpan">荣耀畅玩系列</span></a></li>
+    							</ul>
+    							<div class="cplis-two">
+    								<div>
+    									<a href="#">查看全部</a>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    				</li>
+ 
+    			</ol>
+    		</div>
+    	
+    	<!-- 分类框结束 -->
+
+			<span id="hot-left" class="iconfont icon-Group-"></span>
+			<span id="hot-right" class="iconfont icon-yo"></span>
+
+    		<ul class='hot-lis' id='hot-lis'>
+    			<li class="selected"></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    		</ul>
+		</div>
+
+    	<!-- 轮播图结束 -->
+
+    	<!-- 菜单栏开始 -->
+    	<div class="menubar">
+    		<div class="bar-center">
+    			<div class="bar-top">
+    				<div class="bar-list">
+    					<ul class="bar-lis">
+    						<li class="bl-one">
+    							<div class="bo-one">
+    								<div class="bo-two">
+    									<img src="img/people.png" alt="">
+    								</div>
+    								<div class="bo-three">
+    									<div>您好 ! 请 <a href="page/login.html">登录</a><span>&nbsp;/&nbsp;</span>
+    									<a href="#">注册</a></div>
+    									<div class="bo-four">
+    										<a class="bfone" href="">新人福利</a>
+    										<a class="bftwo" href="">会员频道</a>
+    								</div>
+    								</div>
+    								
+    							</div>
+    						</li>
+    						<li class="bl-two">
+    							<ul class="bt-lis">
+    								<li><a href="#">
+    									<div class="bt-img"><img src="img/10plus.png" alt=""></div>
+    									<div class="bt-txt">企业购特惠</div>
+    								</a></li>
+    								<li>
+    									<a href="#">
+    									<div class="bt-img1"><img src="img/10plus.png" style="width:40px height:40px" alt=""></div>
+    									<div class="bt-txt1">会员领券</div>
+    								</a>
+    								</li>
+    								<li><a href="#">
+    									<div class="bt-img2"><img src="img/10plus.png" style="width:40px height:40px" alt=""></div>
+    									<div class="bt-txt1">以旧换新</div>
+    								</a></li>
+    								<li>
+    									<a href="#">
+    									<div class="bt-img3"><img src="img/10plus.png" style="width:40px height:40px" alt=""></div>
+    									<div class="bt-txt1">Mate30系列</div>
+    								</a>
+    								</li>
+    								<li>
+    									<a href="#">
+    									<div class="bt-img4"><img src="img/10plus.png" style="width:40px height:40px" alt=""></div>
+    									<div class="bt-txt1">荣耀数码</div>
+    								</a>
+    								</li>
+    								<li>
+    									<a href="#">
+    									<div class="bt-img5"><img src="img/10plus.png" style="width:40px height:40px" alt=""></div>
+    									<div class="bt-txt1">华为数码</div>
+    								</a>
+    								</li>
+    							</ul>
+    						</li>
+    						<li class="bl-three">
+    							<div class="bt-notice">
+    								<div class="notice">
+    									<a href="#">公告</a>
+    								</div>
+    								<div class="notice-right">
+    									<ul class="notice-lis">
+    										<li><a href="#">荣耀手环5新色上市活动公告</a></li>
+    										<li><a href="#">8月份荣耀智慧屏系列支付赢...</a></li>
+    										<li><a href="#">荣耀出游季活动公告</a></li>
+    										<li><a href="#">荣耀Play 3e 新品上市</a></li>
+    										<li><a href="#">微信支付使用工行卡，随机立减...</a></li>
+    										<li><a href="#"></a>荣耀手环5新色上市活动公告</li>
+    									</ul>
+    								</div>
+    							</div>
+    							<div class="bt-bottom">
+    								<ul>
+    									<li><a href="#">
+    										<span><img class="bb-img1" src="img/10plus.png" alt=""></span>
+    									优购码</a></li>
+    									<li><a  href=""><span><img class="bb-img2" src="img/10plus.png" alt=""></span>实名认证</a></li>
+    									<li><a  href=""><span><img class="bb-img3" src="img/10plus.png" alt=""></span>补购保障</a></li>
+    								</ul>
+    							</div>
+    						</li>
+    					</ul>
+    				</div>
+    				<div class="bar-mid">
+    					<ul class="bar-uls">
+    						<li class="bar-ulso"><a href="#"><img src="img/nphone5.jpg" alt=""></a></li>
+    						<li class="bar-ulss"><a href="#"><img src="img/nphone6.jpg" alt=""></a></li>
+    						<li class="bar-ulss"><a href="#"><img src="img/nphone7.jpg" alt=""></a></li>
+    						<li class="bar-ulss"><a href="#"><img src="img/nphone8.jpg" alt=""></a></li>
+    					</ul>
+    				</div>
+    		  	</div>
+    		  	<div class="bar-middle">
+    		  		<div class="bm-top">
+    		  			<h2>热销单品</h2>
+    		  		</div>
+    		  		<div class="bm-mid">
+    		  			<div class="bmm-left">
+    		  				<ul>
+    		  					<li>
+    		  						<a href="#"><img src="img/nphone9.jpg" alt=""></a>
+    		  					</li>
+    		  				</ul>
+    		  			</div>
+    		  			<div class="bmm-right clearfix">
+    		  				<ul>
+    		  					<li><a href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/nphone10.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀Play3</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a></li>
+    		  					<li><a href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/nphone12.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI P30 Pro</p>
+    		  						<p class="bmm-txttwo">赠好礼！享12期免息</p>
+    		  						<p class="bmm-txtthree">￥4988</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a></li>
+    		  					<li><a href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/nphone14.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI P30</p>
+    		  						<p class="bmm-txttwo">赠好礼！享12期免息</p>
+    		  						<p class="bmm-txtthree">￥3688</p>
+    		  					</a></li>
+    		  					<li><a href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/nphone15.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀20S</p>
+    		  						<p class="bmm-txttwo">新品享6期免息</p>
+    		  						<p class="bmm-txtthree">￥1899</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-fiveg">5G新品</span>
+    		  						</p>
+    		  					</a></li>
+    		  					<li><a href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/nphone16.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI Mate 20X(5G)</p>
+    		  						<p class="bmm-txttwo">5G双模全网通手机</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a></li>
+    		  					<li><a href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/nphone17.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀V20</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥2099</p>
+    		  					</a></li>
+    		  					<li><a href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/nphone18.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为畅享10 Plus</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥1499</p>
+    		  						
+    		  					</a></li>
+    		  					<li><a href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/nphone13.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀20 Pro</p>
+    		  						<p class="bmm-txttwo">赠好礼！享12期免息</p>
+    		  						<p class="bmm-txtthree">￥2899</p>
+    		  						
+    		  					</a></li>
+    		  				</ul>
+    		  			</div>
+    		  		</div>
+    		  	</div>
+    		  	<div class="bar-bottom">
+    		  		 <div class="bb-top">
+    		  		 	<h2 class="bb-txt">精品推荐</h2>
+    		  		 </div>
+    		  		 <div class="bb-main">
+    		  		 	<ul class="bb-lis">
+    		  		 	  <li><a href="page/华为Mate30.html">
+    		  		 	  		<div class="bb-info">
+    		  						<p class="bi-img"><img src="img/nphone19.png" alt=""></p>
+    		  						<p class="bi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="bi-one">华为智慧屏</p>
+    		  						<p class="bi-two">暂无报价</p>
+    		  						<p class="bi-three">
+    		  							
+    		  						</p>
+    		  					</a>
+    		  		 	  </li>
+    		  		 	  <li><a href="page/华为Mate30.html">
+    		  		 	  		<div class="bb-info">
+    		  						<p class="bi-img"><img src="img/nphone20.png" alt=""></p>
+    		  						<p class="bi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="bi-one">荣耀智慧屏系列</p>
+    		  						<p class="bi-two">￥688</p>
+    		  						<p class="bi-three">
+    		  							<span class="bi-span">新品预定</span>
+    		  						</p>
+    		  					</a></li>
+    		  		 	  <li><a href="page/华为Mate30.html">
+    		  		 	  		<div class="bb-info">
+    		  						<p class="bi-img"><img src="img/nphone21.png" alt=""></p>
+    		  						<p class="bi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="bi-one">M6 10.8英寸 6GB+256GB 全网通</p>
+    		  						<p class="bi-two">￥688</p>
+    		  						<p class="bi-three">
+    		  							
+    		  						</p>
+    		  					</a></li>
+    		  		 	  <li><a href="page/华为Mate30.html">
+    		  		 	  		<div class="bb-info">
+    		  						<p class="bi-img"><img src="img/nphone22.png" alt=""></p>
+    		  						<p class="bi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="bi-one">荣耀手环 5</p>
+    		  						<p class="bi-two">￥688</p>
+    		  						<p class="bi-three">
+    		  							<span class="bi-span">新品预定</span>
+    		  						</p>
+    		  					</a></li>
+    		  		 	  <li><a href="page/华为Mate30.html">
+    		  		 	  		<div class="bb-info">
+    		  						<p class="bi-img"><img src="img/nphone23.png" alt=""></p>
+    		  						<p class="bi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="bi-one">OSMO MOBILE灵眸手机云台3</p>
+    		  						<p class="bi-two">￥688</p>
+    		  						<p class="bi-three">
+    		  							<span class="bi-span">新品预定</span>
+    		  						</p>
+    		  					</a></li>
+    		  		 	  <li><a href="page/华为Mate30.html">
+    		  		 	  		<div class="bb-info">
+    		  						<p class="bi-img"><img src="img/nphone24.png" alt=""></p>
+    		  						<p class="bi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="bi-one">荣耀平板5 10.1英寸</p>
+    		  						<p class="bi-two">￥688</p>
+    		  						<p class="bi-three">
+    		  							<span class="bi-span">新品预定</span>
+    		  						</p>
+    		  					</a></li>
+    		  		 	  <li><a href="page/华为Mate30.html">
+    		  		 	  		<div class="bb-info">
+    		  						<p class="bi-img"><img src="img/shoubiao.png" alt=""></p>
+    		  						<p class="bi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="bi-one">华为儿童手表3s</p>
+    		  						<p class="bi-two">￥688</p>
+    		  						<p class="bi-three">
+    		  							<span class="bi-span">新品预定</span>
+    		  						</p>
+    		  					</a></li>
+    		  		 	  <li><a href="page/华为Mate30.html">
+    		  		 	  		<div class="bb-info">
+    		  						<p class="bi-img"><img src="img/nphone25.png" alt=""></p>
+    		  						<p class="bi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="bi-one">华为平板 M6 8.4英寸</p>
+    		  						<p class="bi-two">￥688</p>
+    		  						<p class="bi-three">
+    		  							<span class="bi-span">新品预定</span>
+    		  						</p>
+    		  					</a></li>
+    		  		 	  <li><a href="#">
+    		  		 	  		<div class="bb-info">
+    		  						<p class="bi-img"><img src="img/nphone26.png" alt=""></p>
+    		  						<p class="bi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="bi-one">HUAWEI FreeLace 无线耳机</p>
+    		  						<p class="bi-two">￥688</p>
+    		  						<p class="bi-three">
+    		  							<span class="bi-span">新品预定</span>
+    		  						</p>
+    		  					</a></li>
+    		  		 	</ul>
+    		  		 	<div class="bb-moveright">
+    		  		 		<span class="iconfont icon-you"></span>
+    		  		 	</div>
+    		  		 	<div class="bb-moveleft">
+    		  		 		<span class="iconfont icon-Group-"></span>
+    		  		 	</div>
+    		  		 </div>
+    		  	 </div>
+    		</div>		
+    	</div>
+    	<!-- 菜单栏结束 -->
+
+    	<!-- 菜单栏底下轮换图开始 -->
+    	<div class="hottwo">
+    		<div class="ht-center">
+    			<div class="ht-top"></div>
+    			<div class="ht-mid" id="ht-mid">
+    				<ul class="ht-uls" id="ht-uls">
+    					<li class="selected"><a href="#"><img src="img/hottwo1.jpg" alt=""></a></li>
+    					<li><a href="#"><img src="img/hottwo2.png" alt=""></a></li>
+    					<li><a href="#"><img src="img/hottwo3.jpg" alt=""></a></li>
+    					<li><a href="#"><img src="img/hottwo4.jpg" alt=""></a></li>
+    					<li><a href="#"><img src="img/hottwo5.jpg" alt=""></a></li>
+    					<li><a href="#"><img src="img/hottwo6.jpg" alt=""></a></li>
+    					<li><a href="#"><img src="img/hottwo7.jpg" alt=""></a></li>
+    					<li><a href="#"><img src="img/hottwo8.jpg" alt=""></a></li>
+    					<li><a href="#"><img src="img/hottwo9.jpg" alt=""></a></li>
+    				</ul>
+    				<div class="ht-list">
+    					<span class="currsored"></span>
+    					<span class="#"></span>
+    					<span class="#"></span>
+    					<span class="#"></span>
+    					<span class="#"></span>
+    					<span class="#"></span>
+    					<span class="#"></span>
+    					<span class="#"></span>
+    					<span class="#"></span>
+    				</div>
+    			</div>
+    			<div class="ht-bottom"></div>
+    		</div>
+    	</div>
+
+    	<!-- 菜单栏底下轮换图结束 -->
+
+    	<!-- 手机区开始 -->
+       <div class="shopbox">
+    		<div class="phonebox">
+    			<div class="pb">
+    			<div class="pb-top">
+    				<h2>手机</h2>
+    				<ul class="pb-lis">
+    					<li class="pt-li1"><a href="#">荣耀</a></li>
+    					<li class="pt-li2"><a href="#">HUAWEI P系列</a></li>
+    					<li class="pt-li3"><a href="#">HUAWEI Mate系列</a></li>
+    					<li class="pt-li4"><a href="#">荣耀畅玩系列</a></li>
+    					<li class="pt-li5"><a href="#">HUAWEI nova系列</a></li>
+    					<li class="pt-li6"><a href="#">华为畅享系列</a></li>
+    					<li class="pt-li7"><a href="#">HUAWEI 麦芒系列</a></li>
+    					<li class="pt-li8"><a href="#">移动4G+专区</a></li>
+    				</ul>
+    				<div class="pb-many">
+    				 	<a href="#">查看更多 ></a>
+    				</div>
+    			 </div>
+    			 <div class="pb-main">
+    			 	<ul class="pm-lis">
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href=""><img class="pm-img" src="img/nphone11.png" alt=""></a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p1.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀9X PRO</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p2.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI Mate 20 Pro</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p3.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀20i</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p4.png" alt=""></p>
+    		  						<p class="bmm-txtone">nova 5</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p5.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀10青春版</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p6.png" alt=""></p>
+    		  						<p class="bmm-txtone">赠好礼|享12期免息</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p7.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀8X</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p8.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI Mate 20 X</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p9.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀Magic2</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p10.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为畅享9 Plus</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p11.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀畅玩8</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p12.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为畅享9</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p13.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀8X Max</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p14.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI nova 5i</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p15.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀畅玩8A</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p16.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为畅享 9S</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p17.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀Note10</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p18.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀Play3</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/p19.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀Play3e</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 </div>
+    			 </div>
+    		  </div>
+
+		    <div class="computerbox">
+    			<div class="pb cb">
+    			<div class="pb-top cb-top">
+    				<h2>笔记本电脑</h2>
+    				<ul class="pb-lis">
+    					<li class="pt-li1"><a href="#">平板电脑</a></li>
+    					<li class="pt-li2"><a href="#">笔记本电脑</a></li>
+    					<li class="pt-li3"><a href="#">笔记本配件</a></li>
+    				</ul>
+    				<div class="pb-many"><a href="#">查看更多 ></a></div>
+    			 </div>
+    			 <div class="pb-main">
+    			 	<ul class="pm-lis">
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="#"><img class="pm-img" src="img/computer1.jpg" alt=""></a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/c1.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI MateBook D</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/c2.png" alt=""></p>
+    		  						<p class="bmm-txtone">【新品】荣耀MagicBook 2019</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/c3.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI MateBook X Pro</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/c4.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀MagicBook 2019 锐龙版</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/c5.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI MateBook E 2019款</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/c6.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀MagicBook</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/c7.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI MateBook 14</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/c8.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI MateBook 13</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/c9.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI MateBook X Pro</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 </div>
+    			</div>
+    		 </div>
+
+
+		     <div class="ppcbox">
+    		     <div class="pb ppb">
+    			<div class="pb-top ppb-top">
+    				<h2>精品平板</h2>
+    				<ul class="pb-lis">
+    					<li class="pt-li1"><a href="#">平板电脑</a></li>
+    					<li class="pt-li2"><a href="#">笔记本电脑</a></li>
+    					<li class="pt-li3"><a href="#">笔记本配件</a></li>
+    				</ul>
+    				<div class="pb-many"><a href="#">查看更多 ></a></div>
+    			 </div>
+    			 <div class="pb-main ppb-main">
+    			 	<ul class="pm-lis">
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html"><img class="pm-img" src="img/PPC1.jpg" alt=""></a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/q1.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀平板5 10.1英寸</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/q2.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为平板 M6  8.4英寸</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/q3.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀平板5 8英寸</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/q4.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为平板 M5 青春版 10.1英寸</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/q5.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀Waterplay</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/q6.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为畅享平板</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/q7.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀Waterplay 8英寸</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/q8.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为平板 M5 青春版 8.0英寸</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/q9.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀畅玩平板2 9.6英寸</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 </div>
+    			 </div>
+    		 </div>
+
+    	    <div class="smartwatchbox">
+    		    <div class="pb swb">
+    			 <div class="pb-top swb-top">
+    				<h2>智能穿戴</h2>
+    				<ul class="pb-lis">
+    					<li class="pt-li1"><a href="#">手环</a></li>
+    					<li class="pt-li2"><a href="#">手表</a></li>
+    					<li class="pt-li3"><a href="#">VR</a></li>
+    				</ul>
+    				<div class="pb-many"><a href="#">查看更多 ></a></div>
+    			 </div>
+
+    			 <div class="swb-center">
+    			 <div class="pb-main swb-main">
+    			 	<ul class="pm-lis swb-lis">
+    			 		<li class="pm-lisl swb-lisl">
+    			 			<a class="pm-lisla swb-lisla" href=""><img class="pm-img swb-img" src="img/smartwatch1.png" alt=""></a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/s1.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀手表魔法系列</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/s2.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI WATCH GT</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/s3.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为儿童手表 3s（冰山蓝）</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/s4.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀手表梦幻系列</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/s5.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为手环 4e 篮球精灵</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/s6.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀手环 5</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/s7.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为手环 B5</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/s8.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀手环5 篮球版</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 </div>
+    			 <div class="swb-bottom">
+    			 	<ul class="swbb-lis ssblis1">
+    			 		<li><a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/s9.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表 3 Pro</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a></li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/s10.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀手环4</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/s11.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为手环 3 Pro</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/s12.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀小K 2 儿童手表</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/s13.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀小K 2 儿童手表</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/s14.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表 3</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/s15.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀手环4 Running版</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 	<div class="swbb-moveright ssbr1">
+    		  		 		<span class="iconfont icon-you"></span>
+    		  		 	</div>
+    		  		 <div class="swbb-moveleft ssbl1">
+    		  		 		<span class="iconfont icon-Group-"></span>
+    		  		 </div>
+    			 </div>
+    			</div>
+    			</div>
+    		</div>	
+
+    		<div class="smartwatchbox house">
+    		    <div class="pb swb">
+    			 <div class="pb-top swb-top">
+    				<h2>智能家居</h2>
+    				<ul class="pb-lis">
+    					<li class="pt-li1"><a href="#">智慧屏</a></li>
+    					<li class="pt-li2"><a href="#">路由器</a></li>
+    					<li class="pt-li3"><a href="#">子母/分布式路由</a></li>
+    					<li class="pt-li1"><a href="#">电力猫/wifi放大器</a></li>
+    					<li class="pt-li2"><a href="#">移动路由</a></li>
+    					<li class="pt-li3"><a href="#">电视盒子</a></li>
+    					<li class="pt-li1"><a href="#">照明</a></li>
+    					<li class="pt-li2"><a href="#">清洁</a></li>
+    					<li class="pt-li3"><a href="#">节能</a></li>
+    					<li class="pt-li1"><a href="#">环境</a></li>
+    					<li class="pt-li2"><a href="#">安防</a></li>
+    					<li class="pt-li3"><a href="#">健康</a></li>
+    					<li class="pt-li1"><a href="#">运动</a></li>
+    				</ul>
+    				<div class="pb-many"><a href="#">查看更多 ></a></div>
+    			 </div>
+
+    			 <div class="swb-center">
+    			 <div class="pb-main swb-main">
+    			 	<ul class="pm-lis swb-lis">
+    			 		<li class="pm-lisl swb-lisl">
+    			 			<a class="pm-lisla swb-lisla" href=""><img class="pm-img swb-img" src="img/house1.jpg" alt=""></a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/w1.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀智慧屏PRO</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/w2.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为 5G CPE Pro</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/w3.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀路由Pro 2</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/w4.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为路由WS5108（黑色）</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/w5.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀YOYO智能音箱</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/w6.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为 AI 音箱</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/w7.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀路由2S</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/w8.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为移动路由4G路由2 Pro</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 </div>
+    			 <div class="swb-bottom">
+    			 	<ul class="swbb-lis ssblis2">
+    			 		<li><a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/w9.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀盒子Pro</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a></li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/w10.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为路由WS5200四核版</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/w11.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀路由 X2</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/w12.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为子母路由 Q2 Pro</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/w13.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀存储</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/w14.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为路由WS5200增强版</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为备咖存储</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀分布式路由/p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为随行WiFi 2 Pro</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 	<div class="swbb-moveright ssbr2">
+    		  		 		<span class="iconfont icon-you"></span>
+    		  		 	</div>
+    		  		 <div class="swbb-moveleft ssbl2">
+    		  		 		<span class="iconfont icon-Group-"></span>
+    		  		 </div>
+    			 </div>
+    			 </div>
+    		    </div>	
+    		  </div>
+    		
+
+    		<div class="smartwatchbox parts">
+    		    <div class="pb swb">
+    			 <div class="pb-top swb-top">
+    				<h2>热销配件</h2>
+    				<ul class="pb-lis">
+    					<li class="pt-li1"><a href="#">保护膜</a></li>
+    					<li class="pt-li2"><a href="#">保护套</a></li>
+    					<li class="pt-li3"><a href="#">贴膜</a></li>
+    					<li class="pt-li1"><a href="#">移动电源</a></li>
+    					<li class="pt-li2"><a href="#">耳机</a></li>
+    					<li class="pt-li3"><a href="#">充电线/线材</a></li>
+    					<li class="pt-li1"><a href="#">自拍杆/支架</a></li>
+    					<li class="pt-li2"><a href="#">音箱</a></li>
+    					<li class="pt-li3"><a href="#">U盘/储存卡</a></li>
+    					<li class="pt-li1"><a href="#">摄像头/镜头</a></li>
+    					<li class="pt-li2"><a href="#">智能眼镜</a></li>
+    					<li class="pt-li3"><a href="#">智能硬件</a></li>
+    				</ul>
+    				<div class="pb-many"><a href="#">查看更多 ></a></div>
+    			 </div>
+
+    			 <div class="swb-center">
+    			 <div class="pb-main swb-main">
+    			 	<ul class="pm-lis swb-lis">
+    			 		<li class="pm-lisl swb-lisl">
+    			 			<a class="pm-lisla swb-lisla" href=""><img class="pm-img swb-img" src="img/parts1.png" alt=""></a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/r1.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀智能体脂秤</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/r2.png" alt=""></p>
+    		  						<p class="bmm-txtone">HUAWEI FreeBuds 2系列</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/r3.png" alt=""></p>
+    		  						<p class="bmm-txtone">FlyPods系列无线耳机</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/r4.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为智能体脂秤</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/r5.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀移动电源2 20000mAh (Max 18W) 快充版</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/r6.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为快充移动电源 20000mAh</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/r7.png" alt=""></p>
+    		  						<p class="bmm-txtone">荣耀FlyPods青春版 真无线耳机</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="page/华为Mate30.html">
+    		  						<p class="bmm-img"><img src="img/r8.png" alt=""></p>
+    		  						<p class="bmm-txtone">华为mini蓝牙音箱</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 </div>
+    			 <div class="swb-bottom">
+    			 	<ul class="swbb-lis ssblis3">
+    			 		<li><a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/r9.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀xSport 运动蓝牙耳机</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a></li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/r11.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">HUAWEI FreeBuds 悦享版</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/r12.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀魔方蓝牙音箱</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/r13.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为智能体脂秤 WiFi版</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="page/华为Mate30.html">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/r14.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为无线充电器</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/r15.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">荣耀智能体脂秤WiFi版</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 	<div class="swbb-moveright ssbr3">
+    		  		 		<span class="iconfont icon-you"></span>
+    		  		 	</div>
+    		  		 <div class="swbb-moveleft ssbl3">
+    		  		 		<span class="iconfont icon-Group-"></span>
+    		  		 </div>
+    			 </div>
+    			</div>
+    		 </div>
+            </div>
+
+
+            <div class="smartwatchbox zoology">
+    		    <div class="pb swb">
+    			 <div class="pb-top swb-top">
+    				<h2>生态精品</h2>
+    				<ul class="pb-lis">
+    					<li class="pt-li1"><a href="#">智慧屏</a></li>
+    					<li class="pt-li2"><a href="#">路由器</a></li>
+    					<li class="pt-li3"><a href="#">子母/分布式路由</a></li>
+    					<li class="pt-li1"><a href="#">电力猫/wifi放大器</a></li>
+    					<li class="pt-li2"><a href="#">移动路由</a></li>
+    					<li class="pt-li3"><a href="#">电视盒子</a></li>
+    					<li class="pt-li1"><a href="#">照明</a></li>
+    					<li class="pt-li2"><a href="#">清洁</a></li>
+    					<li class="pt-li3"><a href="#">节能</a></li>
+    					<li class="pt-li1"><a href="#">环境</a></li>
+    					<li class="pt-li2"><a href="#">安防</a></li>
+    					<li class="pt-li3"><a href="#">健康</a></li>
+    					<li class="pt-li1"><a href="#">运动</a></li>
+    				</ul>
+    				<div class="pb-many"><a href="#">查看更多 ></a></div>
+    			 </div>
+
+    			 <div class="swb-center">
+    			 <div class="pb-main swb-main">
+    			 	<ul class="pm-lis swb-lis">
+    			 		<li class="pm-lisl swb-lisl">
+    			 			<a class="pm-lisla swb-lisla" href=""><img class="pm-img swb-img" src="img/zoology1.png" alt=""></a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/l1.png" alt=""></p>
+    		  						<p class="bmm-txtone">720全效空气净化器</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/l2.png" alt=""></p>
+    		  						<p class="bmm-txtone">海雀AI全景摄像头</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/l3.png" alt=""></p>
+    		  						<p class="bmm-txtone">欧瑞博智能插座</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/l4.png" alt=""></p>
+    		  						<p class="bmm-txtone">科沃斯 智能扫地机器人</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/l5.png" alt=""></p>
+    		  						<p class="bmm-txtone">欧普读写台灯</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/l6.png" alt=""></p>
+    		  						<p class="bmm-txtone">美的布谷电热水壶</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/l7.png" alt=""></p>
+    		  						<p class="bmm-txtone">遥控大师空调伴侣</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/l8.png" alt=""></p>
+    		  						<p class="bmm-txtone">nimova 智能护眼台灯Pro</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 </div>
+    			 <div class="swb-bottom">
+    			 	<ul class="swbb-lis ssblis4">
+    			 		<li><a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/l9.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">科沃斯 智能扫地机器人</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a></li>
+    			 		<li>
+    			 			<a href="">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/l10.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">品多 全自动智能指纹门锁</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/l11.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">三思全彩灯泡</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/l13.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">享睡 香薰助眠灯</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/l14.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">iateey智能即热饮水吧</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/l15.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">极米无屏电视Z6X</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 	<div class="swbb-moveright ssbr4">
+    		  		 		<span class="iconfont icon-you"></span>
+    		  		 	</div>
+    		  		 <div class="swbb-moveleft ssbl4">
+    		  		 		<span class="iconfont icon-Group-"></span>
+    		  		 </div>
+    			 </div>
+    			</div>
+    			</div>
+    		</div>	 
+
+    		<div class="division-one"></div>
+    		<div class="division-img">
+    			<div class="dimg">
+    		 		<a href="#">
+    					<img src="img/life1.jpg" alt="">
+    				</a>
+    			</div>
+    			</div>
+    		<div class="division-two"></div>
+
+
+    		<div class="smartwatchbox well">
+    		    <div class="pb swb">
+    			 <div class="pb-top swb-top">
+    				<h2>精选配件</h2>
+    				<ul class="pb-lis">
+    					<li class="pt-li1"><a href="#">保护膜</a></li>
+    					<li class="pt-li2"><a href="#">保护套</a></li>
+    					<li class="pt-li3"><a href="#">贴膜</a></li>
+    					<li class="pt-li1"><a href="#">移动电源</a></li>
+    					<li class="pt-li2"><a href="#">耳机</a></li>
+    					<li class="pt-li3"><a href="#">充电线/线材</a></li>
+    					<li class="pt-li1"><a href="#">自拍杆/支架</a></li>
+    					<li class="pt-li2"><a href="#">音箱</a></li>
+    					<li class="pt-li3"><a href="#">U盘/储存卡</a></li>
+    					<li class="pt-li1"><a href="#">摄像头/镜头</a></li>
+    					<li class="pt-li2"><a href="#">智能眼镜</a></li>
+    					<li class="pt-li3"><a href="#">智能硬件</a></li>
+    				</ul>
+    				<div class="pb-many"><a href="#">查看更多 ></a></div>
+    			 </div>
+
+    			 <div class="swb-center">
+    			 <div class="pb-main swb-main">
+    			 	<ul class="pm-lis swb-lis">
+    			 		<li class="pm-lisl swb-lisl">
+    			 			<a class="pm-lisla swb-lisla" href=""><img class="pm-img swb-img" src="img/well1.jpg" alt=""></a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/j1.png" alt=""></p>
+    		  						<p class="bmm-txtone">MOMAX 无线充电车载支架套装</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  						<p class="bmm-txttop">
+    		  							<span class="bmm-txttops">新品</span>
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/j2.png" alt=""></p>
+    		  						<p class="bmm-txtone">锐舞驱蚊捕蚊物理灭蚊灯</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/j3.png" alt=""></p>
+    		  						<p class="bmm-txtone">青稞智能指纹锁 E5H 款</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/j4.png" alt=""></p>
+    		  						<p class="bmm-txtone">德龙 复古早餐系列电热水壶</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/j5.png" alt=""></p>
+    		  						<p class="bmm-txtone">北通G1手游游戏手柄</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/j6.png" alt=""></p>
+    		  						<p class="bmm-txtone">飞宇ELLA 三轴手持手机稳定器</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/j7.png" alt=""></p>
+    		  						<p class="bmm-txtone">贝克巴斯厨房厨余粉碎机</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 		<li class="pm-lisl">
+    			 			<a class="pm-lisla" href="">
+    		  						<p class="bmm-img"><img src="img/j8.png" alt=""></p>
+    		  						<p class="bmm-txtone">舒华A9跑步机</p>
+    		  						<p class="bmm-txttwo">4800万直出三摄</p>
+    		  						<p class="bmm-txtthree">￥999</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 </div>
+    			 <div class="swb-bottom">
+    			 	<ul class="swbb-lis ssblis5">
+    			 		<li><a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/j9.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">BOSE蓝牙头戴式降噪耳机</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a></li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/j10.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">九阳迷你多功能果汁杯</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/j11.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">科沃斯DE55扫地机器人</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/j12.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">九阳旅行折叠电水壶</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/j13.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">BOW 蓝牙背光键盘</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/j14.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">科大讯飞翻译机</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 		<li>
+    			 			<a href="#">
+    		  		 	  		<div class="swbb-info">
+    		  						<p class="swbi-img"><img class="swbimg" src="img/shoubiao.png" alt=""></p>
+    		  						<p class="swbi-txt">订金50抵100 赠华为车充</p>
+    		  					</div>
+    		  						<p class="swbi-one">华为儿童手表3s</p>
+    		  						<p class="swbi-two">￥688</p>
+    		  						<p class="swbi-three">
+    		  						</p>
+    		  					</a>
+    			 		</li>
+    			 	</ul>
+    			 	<div class="swbb-moveright ssbr5">
+    		  		 		<span class="iconfont icon-you"></span>
+    		  		 	</div>
+    		  		 <div class="swbb-moveleft ssbl5">
+    		  		 		<span class="iconfont icon-Group-"></span>
+    		  		 </div>
+    			 </div>
+    			 </div>
+    		    </div>	
+    		  </div>
+       </div>
+    	<!-- 手机区结束 -->
+
+    	<!-- 底部图片开始 -->
+    	<div class="bottom-img">
+    		<div class="btm-img">
+    			<a href="#">
+    				<img src="img/new1.jpg" alt="">
+    			</a>
+    		</div>
+    	</div>
+    	<!-- 底部图片结束 -->
+
+    	<!-- 底部开始 -->
+    	<div class="bottom-one">
+    		<div class="btm-one">
+    			<ul class="btmone-lis">
+    				<li class="btmli1"><a href=""><i></i>百强企业&nbsp;品质保证</a></li>
+    				<li class="btmli2"><a href=""><i></i>7天退货15天换货</a></li>
+    				<li class="btmli3"><a href=""><i></i>48元起免运费</a></li>
+    				<li class="btmli4"><a href=""><i></i>1000家维修网点全国联保</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="bottom-two">
+    		<div class="btm-two">
+    			<div class="btmtwo-left">
+    				<dl class="btmleft1">
+    				<dt>购物指南</dt>
+    						<ul>
+    							<li><a href="">购物指南</a></li>
+    							<li><a href="">配送方式</a></li>
+    							<li><a href="">支付方式</a></li>
+    							<li><a href="">常见问题</a></li>
+    					</ul>
+    					
+    				</dl>
+    				<dl class="btmleft2">
+    					<dt>保修与退换货</dt>
+    						<ul>
+    							<li><a href="">保修政策</a></li>
+    							<li><a href="">退换货政策</a></li>
+    							<li><a href="">退换货流程</a></li>
+    							<li><a href="">保修状态查询</a></li>
+    							<li><a href="">配件防伪查询</a></li>
+    						</ul>
+    					
+    				</dl>
+    				<dl class="btmleft3">
+    					<dt>维修与技术支持</dt>
+    						<ul>
+    							<li><a href="">售后网点</a></li>
+    							<li><a href="">预约维修</a></li>
+    							<li><a href="">手机寄修</a></li>
+    							<li><a href="">备件价格查询</a></li>
+    							<li><a href="">上门服务</a></li>
+    						</ul>
+    				</dl>
+    				<dl class="btmleft4">
+    					<dt>特色服务</dt>
+    						<ul>
+    							<li><a href="">防伪查询</a></li>
+    							<li><a href="">补购保障</a></li>
+    							<li><a href="">以旧换新</a></li>
+    							<li><a href="">礼品包装</a></li>
+    						</ul>
+    				</dl>
+    				<dl class="btmleft5">
+    					<dt>关于我们</dt>
+    						<ul>
+    							<li><a href="">公司介绍</a></li>
+    							<li><a href="">华为商城简介</a></li>
+    							<li><a href="">华为线下门店</a></li>
+    							<li><a href="">荣耀线下门店</a></li>
+    							<li><a href="">诚征英才</a></li>
+    							<li><a href="">意见反馈</a></li>
+    						</ul>
+    				</dl>
+    				<dl class="btmleft6">
+    					<dt>友情链接</dt>
+    						<ul>
+    							<li><a href="">华为集团</a></li>
+    							<li><a href="">华为CBG官网</a></li>
+    							<li><a href="">荣耀官网</a></li>
+    							<li><a href="">花粉俱乐部</a></li>
+    							<li><a href="">华为云</a></li>
+    					</ul>
+    				</dl>
+    			</div>
+
+    			<div class="btmtwo-right">
+    				<div class="btmright-top">
+    					<div class="btmright1">
+    						<p>400-088-6888</p>
+    					</div>
+    					<div class="btmright2">
+    						7x24小时客服热线（仅收市话费）
+    					</div>
+    					<div class="btmright3">
+    						<a href=""><span class="iconfont icon-kefu"></span>在线客服</a>
+    					</div>
+    				</div>
+    				
+    				<div class="btmright-bottom">
+    					<h3>关注新闻:</h3>
+    					<ul>
+    						<li><a href=""><span class="iconfont icon-weixin1 bbt"></span>
+    						
+    						<div class="weixin">
+    							<span></span>	
+    							<img src="img/20181116180507506.jpg" alt="">
+    						</div>
+    						</a></li>
+    						<li><a href=""><span class="iconfont icon-xinwen"></span></a></li>
+    						<li><a href=""><span class="iconfont icon-xinlang"></span></a></li>
+    						<li><a href=""><span class="iconfont icon-huawei"></span></a></li>
+    					</ul>
+    				</div>
+    			</div>
+    			
+    		</div>
+    	</div>
+    	<div class="bottom-three">
+    		<div class="btm-three">
+    			<div class="btm-center">
+    				<p class="btm-left"><a href=""><img src="img/VMALL.png" alt=""></a></p>
+    				<div class="btm-mid">
+    				<ul>
+    					<li><a href="">华为集团</a></li>
+    						<li><a href="">华为CBG官网</a></li>
+    						<li><a href="">荣耀官网</a></li>
+    						<li><a href="">花粉俱乐部</a></li>
+    						<li><a href="">华为应用市场</a></li>
+    						<li><a href="">EMUI</a></li>
+    						<li><a href="">华为终端云空间</a></li>
+    						<li><a href="">开发者联盟</a></li>
+    						<li><a href="">华为商城手机版</a></li>
+    						<li><a href="">网站地图</a></li>
+    				</ul>
+    				<a href="" >隐私声明</a>
+    				<a href="" >服务协议</a>
+    				<a href="" >COOKIES</a>
+    				<p>&nbsp;© 2012-2019 华为终端有限公司 版权所有&nbsp;</p>
+    				<a href="" >粤ICP备19015064号</a>
+    				<span>|</span>
+    				<a href="">粤公网安备 44190002003939号</a><br>
+    				<p>增值电信业务经营许可证：粤B2-20190762</p>
+    				<span>|</span>
+    				<p>备案主体编号：44201919072182</p>
+    				</div>
+    				<p class="btm-right">
+    					<a href=""><img src="img/footer1.jpg" alt="" title="TRUSTe隐私认证"></a>
+    					<a href=""><img src="img/footer2.png" alt="" title="电子营业执照"></a>
+    				</p>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- 底部结束 -->
+
+    	<!-- 右下角移动栏 -->
+    	<div class="move">
+    		<div class="move-car">
+    			<a href="#" title="购物车">
+    			<span class="iconfont icon-cart_icon"></span>
+    			</a>
+    		</div>
+    		<div class="move-service">
+    			<a href="#" title="在线客服">
+    				<span class="iconfont icon-kefu"></span>
+    			</a>
+    		</div>
+    		<div class="move-opinion">
+    			<a href="#" title="意见反馈">
+    				<span class="iconfont icon-yijianfankui"></span>
+    			</a>
+    		</div>
+    		<div class="move-top">
+    			<a href="#" title="返回顶部">
+    				<span class="iconfont icon-fanhuidingbu"></span>
+    			</a>
+    		</div>
+    	</div>
+    	<!-- 右下角移动栏结束 -->
+
+    	<div class="login">
+    		<div class="login-top">
+    			<a class="lgtopx" href="#">X</a>
+    		</div>
+    		<div class="login-box">
+    					<div class="box-top">
+    						<span class="top-one">账号登录</span>
+    						<span class="top-two">扫码登录</span>			
+    					</div>
+    					<div class="box-mid">
+    					 <div class="mid-one"></div>
+    					   <div class="mid-two">
+    					   		<ul class="mid-lis">
+    					   			<li class="lis-one">
+    					   				<input class="lis-txt" type="text"  placeholder="手机/邮件地址/华为号">
+    					   			</li>
+    					   			<li class="lis-one">
+    					   				<input class="lis-txt" type="text"  placeholder="密码">
+    					   			</li>
+    					   			<li class="lis-two">
+    					   				<a href="">
+    					   					<span class="iconfont icon-yijianfankui">&nbsp;&nbsp;短信验证码登录</span>
+    					   				</a>
+    					   			</li>
+    					   			<li class="lis-three">
+    									<p>登录</p>	
+    					   			</li>
+    					   			<li class="lis-four">
+    					   				
+    					   				<label for="checked"><input id='checked' type="checkbox">&nbsp;&nbsp;记住华为账号</label>
+
+    					   				 <p><a href="">更多</a></p>
+    					   			</li>
+    					   			<li class="lis-five">
+    					   				<div class="five-mid">
+    					   					 <span class="five-spanone"><a href="">注册账号</a></span>
+    					   					 <span class="five-spantwo"><a href="">忘记密码？</a></span>
+    					   				</div>
+    					   			</li>
+    					   		</ul>
+
+    					   		<div class="box-bottom">
+    						<div class="bottom-ones">
+    							<i class="i-left"></i>
+    							<span>其他登录方式</span>
+    							<i class="i-right"></i>
+    						</div>
+    						<div class="bottom-twos">
+    							<span  title="QQ"><a class="btwo-a" href=""></a></span>
+    							<span  title="支付宝"><a class="btwo-b" href=""></a></span>
+    							<span  title="微信"><a class="btwo-c" href=""></a></span>
+    						</div>
+    					    </div> 
+    					   </div>
+    					</div>
+
+    					<div class="qrcode">
+    						<div class="qr-main">
+    							<div class="qrcode-img">
+    								<img src="img/qr2.png" alt="">
+    							</div>
+    						</div>
+    						<div class="qr-right">
+    							
+    						</div>
+    						<div class="qr-footer">
+    							<p>使用华为移动服务APP扫一扫</p>
+    							<p>若您使用华为手机,请进入"设置">"华为帐号"扫码登录。</p>
+    						</div>
+    					</div>
+    		</div>
+    	</div>
+    </body>
+   
+</html>

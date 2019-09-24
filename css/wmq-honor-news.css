@@ -1,0 +1,176 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.wmq-honor-new-box{
+	
+    width: 90%;
+    margin: 0 auto;
+}
+#main{ 
+	min-width: 1220px;
+    padding: 90px 0 0 0;
+}
+.kv-news{ 
+    width: 100%; 
+    height: 265px; 
+    position: relative;
+}
+.kv-news .skew-mask{ 
+    width: 100%; 
+    height: 17px; 
+    background:url(../img/skew-mask.png) 0 -20px no-repeat; 
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    z-index: 5;
+}
+
+/*page-news start*/
+#wrap-perfect-buddies {
+    position: relative;
+    text-align: center;
+}
+#wrap-perfect-buddies .buddies-list {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+#wrap-perfect-buddies .buddies-list li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+}
+#wrap-perfect-buddies .buddies-list li a {
+    display: block;
+    text-align: center;
+    padding: 0 30px;
+    text-decoration:none;
+}
+#wrap-perfect-buddies .buddies-list li a .ico { 
+    width: 40px; 
+    height: 40px; 
+    background: url("../img/wmq-icon-nav.png") no-repeat; 
+    display: inline-block; 
+    vertical-align: top;
+}
+#wrap-perfect-buddies .buddies-list li a .all-ico { 
+    background-position: 0 0; 
+}
+#wrap-perfect-buddies .buddies-list li a .brand-ico{ 
+    background-position: 0 -40px;
+}
+#wrap-perfect-buddies .buddies-list li a .product-ico{ 
+    background-position: 0 -80px;
+}
+#wrap-perfect-buddies .buddies-list li a .product-ico-cp{ 
+    background-position: 0 -480px;
+}
+#wrap-perfect-buddies .buddies-list li a .name { 
+    font-size: 16px; 
+    color: #707070; 
+    text-transform: uppercase; 
+    display: block; 
+    padding-top: 10px;
+}
+#wrap-perfect-buddies .buddies-list li a:hover .all-ico, 
+#wrap-perfect-buddies .buddies-list li a.selected .all-ico{ 
+    background-position: -40px 0;
+}
+#wrap-perfect-buddies .buddies-list li a:hover .brand-ico, 
+#wrap-perfect-buddies .buddies-list li a.selected .brand-ico{ 
+    background-position: -40px -40px;
+}
+#wrap-perfect-buddies .buddies-list li a:hover .product-ico, 
+#wrap-perfect-buddies .buddies-list li a.selected .product-ico{ 
+    background-position: -40px -80px;
+}
+#wrap-perfect-buddies .buddies-list li a:hover .name, 
+#wrap-perfect-buddies .buddies-list li a.selected .name { 
+    color: #01b4e1;
+}
+#wrap-perfect-buddies .buddies-list li a:hover .product-ico-cp, 
+#wrap-perfect-buddies .buddies-list li a.selected .product-ico-cp{
+    background-position: -40px -480px;
+}
+
+.main-section-wrapper{ 
+    position: relative; 
+    padding-bottom: 50px;
+}
+.news-list{ 
+    overflow: hidden;
+}
+.news-list .news-block{
+    cursor: pointer; 
+    width: 380px; 
+    position: relative; 
+    float: left; 
+    // margin-right: 30px; 
+    margin-right: 35px; 
+    margin-bottom: 50px;
+}
+
+.news-list .news-block:nth-child(3n){ 
+    margin-right:0;
+}
+.news-list .news-block:hover{ 
+    -webkit-box-shadow:0 15px 30px rgba(0,0,0,0.1);
+    box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+.news-list .news-block .figure{ 
+    position: relative; 
+    width: 380px; 
+    height: 270px; 
+    overflow: hidden;
+}
+.news-list .news-block .figure:hover img{
+    -webkit-transform: scale(1.05); 
+    transform: scale(1.05);
+}
+.news-list .news-block .desc{ 
+    padding: 20px; 
+    background-color: white;
+}
+.news-list .news-block .desc .title { 
+    height: 48px; margin-bottom: 10px; 
+    line-height: 24px; 
+    font-size: 16px; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+.news-list .news-block .desc .info{ 
+    height: 30px; 
+    line-height: 30px; 
+    font-size: 16px; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.news-list .news-block .desc .datePost{ 
+    color: #999; 
+    text-align: right; 
+    display: block;
+}
+.main-section-wrapper .news-more{ 
+    width: 150px; 
+    padding: 5px 0; 
+    text-align: center; 
+    font-size: 15px; 
+    color: #707070; 
+    cursor: pointer; 
+    display: inline-block; 
+    border:1px solid #707070; 
+    border-radius: 5px; 
+    position: absolute; 
+    bottom: 30px; 
+    left: 50%; 
+    margin-left: -75px;
+}
+

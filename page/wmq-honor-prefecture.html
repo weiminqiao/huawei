@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+      	<title>wmq-honor-prefecture</title>
+        <link rel="stylesheet" href="../css/wmq-honor-prefecture-main.css">
+        <link rel="stylesheet" href="../css/wmq-honor-prefecture-carousel.css">
+        <link rel="stylesheet" href="../css/wmq-honor-precture-header-footer.css">
+        <link rel="stylesheet" href="../css/wmq-honor-prefecture-style-xiala.css">
+        <link rel="stylesheet" href="../css/wmq-honor-prefecture-min-carousel.css">     
+        <script src="../js/jquery-3.4.1.js"></script>
+        <script src="../js/wmq-honor-precture-scoll.js"></script>
+        <script src="../js/wmq-honor-prefecture-header.js"></script>
+        <script src="../js/wmq-honor-prefecture-main-lunbo.js"></script>
+        <script src="../wmq_font_icon/iconfont.js"></script>
+        <style>
+            *{
+              margin: 0px;
+              padding: 0px;
+            }
+            .wmq-daohang-box{
+                 position:fixed;
+                 width: 38px;
+                 top:20%;
+                 right:0;
+                 border: 2px solid #f5f5f5;
+                 display: none;
+                 z-index:50;
+             }
+             .wmq-daohang-box ul{
+
+                 margin-left:0px;
+                 list-style:none;
+                 overflow:hidden;
+             }
+             .wmq-daohang-box ul li{
+                width: 100%;
+                height: 50px;
+                border: 2px solid #f5f5f5;
+                background:f5f5f5;
+             }
+             .wmq-pink-daohang-h4{
+                background:#900;
+             }
+             .wmq-pink-daohang-h4{
+                color:white;
+             }
+             .wmq-totop{
+                width: 100%;
+                height: 50px;
+             }
+             .wmq-icon-a{
+                width: 2em;
+                height: 2em;
+                vertical-align: -0.15em;
+                fill: currentColor;
+                overflow: hidden;
+                position: absolute;
+                right: 0;
+                bottom:0;
+              }
+        </style>
+    </head>
+    <body>
+     <!-- top导航栏 -->
+      <div class="navigation">
+        <div class="center">
+          <div class="nleft">
+            <ul class="nli">
+              <li><a href="../index.html">首页</a></li>
+              <li><a href="huawei.html">华为官网</a></li>
+              <li><a href="wmq-honor-index.html">荣耀官网</a></li>
+              <li><a href="huafuns.html">花粉俱乐部</a></li>
+              <li><a href="#">V码(优购码)</a></li>
+              <li><a href="companygo.html">企业购</a></li>
+              <li><a href="#">Select Region</a></li>
+              <li><a href="#">更多精彩<span id='spone' class="iconfont icon-jiantou_up"></span></a>
+              <div class="nli-one">
+                <dl>
+                  <dt><a href="#">EMUI</a></dt>
+                  <dt><a href="#">应用市场</a></dt>
+                  <dt><a href="#">华为终端云空间</a></dt>
+                  <dt><a href="#">开发者联盟</a></dt>
+                </dl>
+              </div>
+              </li> 
+            </ul>
+          </div>
+          <div class="nright">
+            <ul class="nlis">
+              <li><a href="login.html">请登录</a></li>
+              <li><a href="#">注册</a></li>
+              <li><a href="#">我的订单</a></li>
+              <li><a href="#">客户服务<span id='sptwo' class="iconfont icon-jiantou_up"></span></a>
+              <div class="nlis-one">
+                <dl>
+                  <dt><a href="#">客服中心</a></dt>
+                  <dt><a href="#">联系客服</a></dt>
+                </dl>
+              </div>
+              </li>
+              <li><a href="#">网站导航<span id='spthree' class="iconfont icon-jiantou_up"></span></a>
+              <div class="nlis-two">
+                <div class="wone">
+                  <a href="#">
+                    <span></span>
+                    <div>商城首页</div>
+                  </a>
+                </div>
+                <div class="wtwo">
+                  <div class='a1'>频道</div>
+                    <div class="f1">
+                      <div>华为专区</div>
+                      <a href="wmq-honor-prefecture.html"><div>荣耀专区</div></a>
+                      <a href="companygo.html"> <div>企业购</div></a>
+                    </div>
+                </div>
+                <div class="wthree">
+                  <div class='a1'>产品</div>
+                    <div class="f1">
+                      <div>手机</div>
+                      <div>智能家居</div>
+                      <div>平板&笔记本</div>
+                      <div>通用配件</div>
+                      <div>智能穿戴</div>
+                      <div>专属配件</div>
+                    </div>
+                </div>
+                <div class="wfour">
+                <div class='a1'>增值服务</div>
+                    <div class="f1">
+                      <div>以旧换新</div>
+                      <div>产品包装</div>
+                      <div>补够保障</div>
+                      <div>一口气换电池</div>
+                    </div>
+                  
+                </div>
+                <div class="wfive">
+                <div class='a1'>会员</div>
+                    <div class="f1">
+                      <div>会员频道</div>
+                    </div>
+                </div>
+              </div>
+              </li>
+              <li><a href="#">手机版</a>
+              <div class="nlis-three">
+                <div class="phone">
+                  <div class='phonel'>
+                    <div class='phonell'>
+                      <img class="img-phone" src="../img/phone1.png" alt="">
+                      <div class="phone-div">
+                        <h2>华为商城APP</h2>
+                        <p class="red">新人专享好礼<br>
+                        最高5000积分
+                        </p>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='phonel'>
+                    <div class='phonell'>
+                      <img class="img-phone" src="../img/phone2.jpg" alt="">
+                      <div class="phone-div">
+                        <h2>华为商城公众号</h2>
+                        <p class="red">微信扫一扫</p>
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='phonel'>
+                    <div class='phonell'>
+                      <img class="img-phone" src="../img/phone3.jpg" alt="">
+                      <div class="phone-div">
+                        <h2>微信小程序</h2>
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </li>
+              <li><a href="#"><span class="iconfont icon-cart_icon">&nbsp;</span>购物车(0)</a>
+              <div class="nlis-four">
+                <div class='car'>
+                  <span class="car-sp iconfont icon-cart_icon"></span>
+                  <p class="">您的购物车是空的，赶紧选购吧~</p>
+                </div>
+              </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- top导航栏结束 -->
+
+      
+      <script>
+        $(function(){
+
+             $('#wmq-ulsid>li').hover(function() {
+                  console.log($(this).index());
+                  var a=$(this).index();
+                  $('.wmq-xialala>div').eq(a).slideToggle('slow');
+                  $('.wmq-xialala>div').eq(a).siblings('div').css({display: 'none' });
+             }, function() {
+                   $(".wmq-xialala").mouseleave(function(event) {
+                       $(".wmq-xialala>div").slideUp('slow');
+                 });
+                  
+             }); 
+        })
+      </script>
+     <!-- 下拉start-->
+      <section class="wmq-xialala">
+            <div class="naver-sub-wrap" style="display: none;">
+                         <div class="p-title clearfix">
+                             <div class="s1 fl">
+                                <a href="#" target="_blank"><span>全部</span>荣耀手机</a>
+                             </div>
+                             <div class="s2 fl clearfix">
+                                <a href="#" target="_blank" class="fl">畅玩系列</a>
+                                <a href="#" target="_blank" class="fl">荣耀pro</a>
+                                <a href="#" target="_blank" class="fl">荣耀新款</a>
+                                <a href="#" target="_blank" class="fl">折新</a>
+                       
+                             </div>
+                         </div>
+
+                         <ul id="zxnav_4_prolist" class="grid-list clearfix">
+                               <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                <a class="thumb" target="_blank" href="华为Mate30.html">
+                                    <p class="grid-img"> 
+                                    <img alt="" src="../img/honor-phone8a.jpg"></p>
+                                    <div class="grid-title">荣耀8a</div>
+                                      <p class="grid-price">¥2799</p>
+                                 </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                   <p class="grid-img"> 
+                                   <img alt="" src="../img/honor-phone20i.jpg"></p>
+                                 <div class="grid-title">荣耀20i</div>
+                                 <p class="grid-price">¥4599</p>
+                                  </a>
+                              </li>
+                               <li class="grid-items" data-track="true" data-sbom-code="3102060000503">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-phone20pro.jpg"></p>
+                                      <div class="grid-title">荣耀9i</div>
+                                       <p class="grid-price">¥3199</p>
+                                   </a>
+                              </li>
+                               <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-phone20pro.jpg"></p>
+                                      <div class="grid-title">荣耀智能20pro</div>
+                                       <p class="grid-price">¥4169</p>
+                                  </a>
+                              </li>
+                              <li class="grid-items" data-track="true" data-sbom-code="1303030003603">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-phone20s.gif"></p>
+                                      <div class="grid-title">荣耀xSport</div>
+                                       <p class="grid-price">¥3229</p>
+                                   </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="1302020001104">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-phoneplay3.jpg"></p>
+                                      <div class="grid-title">荣耀畅玩3</div>
+                                       <p class="grid-price">¥5129</p>
+                                   </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="3102130005902">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                   <p class="grid-img"> <img alt="" src="../img/honor-phonev20.jpg"></p>
+                                   <div class="grid-title">荣耀v20</div>
+                                   <p class="grid-price">¥5129</p>
+                                   </a>
+                              </li>
+                         </ul>
+             </div>
+             <div class="naver-sub-wrap" style="display: none;">
+                         <div class="p-title clearfix">
+                             <div class="s1 fl">
+                                <a href="#" target="_blank"><span>全部</span>笔记本&平板</a>
+                             </div>
+                             <div class="s2 fl clearfix">
+                                <a href="#" target="_blank" class="fl">笔记本电脑</a>
+                                <a href="#" target="_blank" class="fl">平板</a>
+                                <a href="#" target="_blank" class="fl">笔记本配件</a>
+                          
+                       
+                             </div>
+                         </div>
+
+                         <ul id="zxnav_4_prolist" class="grid-list clearfix">
+                               <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                <a class="thumb" target="_blank" href="华为Mate30.html">
+                                    <p class="grid-img"> 
+                                    <img alt="" src="../img/pc-honor-MagicBookPro.jpg"></p>
+                                    <div class="grid-title">荣耀MagicBook 2019</div>
+                                      <p class="grid-price">¥6799</p>
+                                 </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                   <p class="grid-img"> 
+                                   <img alt="" src="../img/pc-honor-MagicBook 2019-锐龙版.jpg"></p>
+                                 <div class="grid-title">荣耀 MagicBook Pro 锐龙版</div>
+                                 <p class="grid-price">¥4599</p>
+                                  </a>
+                              </li>
+                               <li class="grid-items" data-track="true" data-sbom-code="3102060000503">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                      <p class="grid-img"> <img alt="" src="../img/pc-honor-MagicBook2019.jpg"></p>
+                                      <div class="grid-title">荣耀平板5</div>
+                                       <p class="grid-price">¥6199</p>
+                                   </a>
+                              </li>
+                               <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-pc (1).png"></p>
+                                      <div class="grid-title">荣耀Waterplay</div>
+                                       <p class="grid-price">¥4169</p>
+                                  </a>
+                              </li>
+                              <li class="grid-items" data-track="true" data-sbom-code="1303030003603">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-pc (5).png"></p>
+                                      <div class="grid-title">荣耀畅玩平板2 9.6英寸</div>
+                                       <p class="grid-price">¥5229</p>
+                                   </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="1302020001104">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-pc (6).png"></p>
+                                      <div class="grid-title">荣耀畅玩平板2 8英寸</div>
+                                       <p class="grid-price">¥529</p>
+                                   </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="3102130005902">
+                                  <a class="thumb" target="_blank" href="华为Mate30.html">
+                                   <p class="grid-img"> <img alt="" src="../img/honor-pc (3).png"></p>
+                                   <div class="grid-title">荣耀20</div>
+                                   <p class="grid-price">¥5129</p>
+                                   </a>
+                              </li>
+                         </ul>
+             </div>
+              <div class="naver-sub-wrap" style="display: none;">
+                         <div class="p-title clearfix">
+                             <div class="s1 fl">
+                                <a href="#" target="_blank"><span>全部</span>潮流穿戴</a>
+                             </div>
+                             <div class="s2 fl clearfix">
+                                <a href="#" target="_blank" class="fl">手表</a>
+                                <a href="#" target="_blank" class="fl">手环</a>
+                               
+                             </div>
+                         </div>
+
+                         <ul id="zxnav_4_prolist" class="grid-list clearfix">
+                               <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                <a class="thumb" target="_blank" href="">
+                                    <p class="grid-img"> 
+                                    <img alt="" src="../img/honor-f3-1 (1).png"></p>
+                                    <div class="grid-title">荣耀手表魔法系列</div>
+                                      <p class="grid-price">¥99</p>
+                                 </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                  <a class="thumb" target="_blank" href="">
+                                   <p class="grid-img"> <img alt="" src="../img/honor-f3-1 (2).png"></p>
+                                 <div class="grid-title">荣耀手表梦幻系列</div>
+                                 <p class="grid-price">¥59</p>
+                                  </a>
+                              </li>
+                               <li class="grid-items" data-track="true" data-sbom-code="3102060000503">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-f3-1 (3).png"></p>
+                                      <div class="grid-title">荣耀手环5 篮球版</div>
+                                       <p class="grid-price">¥199</p>
+                                   </a>
+                              </li>
+                               <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-f3-1 (4).png"></p>
+                                      <div class="grid-title">荣耀手环 5</div>
+                                       <p class="grid-price">¥169</p>
+                                  </a>
+                              </li>
+                              <li class="grid-items" data-track="true" data-sbom-code="1303030003603">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-f3-1 (5).png"></p>
+                                      <div class="grid-title">荣耀手环4</div>
+                                       <p class="grid-price">¥29</p>
+                                   </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="1302020001104">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-f3-1 (5).png"></p>
+                                      <div class="grid-title">荣耀手环4 Running版</div>
+                                       <p class="grid-price">¥129</p>
+                                   </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="3102130005902">
+                                  <a class="thumb" target="_blank" href="">
+                                   <p class="grid-img"> <img alt="" src="../img/honor-f3-1 (8).png"></p>
+                                   <div class="grid-title">荣耀心晴手环</div>
+                                   <p class="grid-price">¥129</p>
+                                   </a>
+                              </li>
+                         </ul>
+               </div>
+              <div class="naver-sub-wrap" style="display: none;">
+                         <div class="p-title clearfix">
+                             <div class="s1 fl">
+                                <a href="#" target="_blank"><span>全部</span>智能家居</a>
+                             </div>
+                             <div class="s2 fl clearfix">
+                                <a href="#" target="_blank" class="fl">路由器</a>
+                                <a href="#" target="_blank" class="fl">电力猫/wifi放大器</a>
+                                <a href="#" target="_blank" class="fl">电视盒子</a>
+                                <a href="#" target="_blank" class="fl">照明</a>
+                                <a href="#" target="_blank" class="fl">清洁</a>
+                                <a href="#" target="_blank" class="fl">节能</a>
+                                <a href="#" target="_blank" class="fl">环境</a>
+                                <a href="#" target="_blank" class="fl">安防</a>
+                                <a href="#" target="_blank" class="fl">健康</a>
+                                <a href="#" target="_blank" class="fl">厨电</a>
+                                <a href="#" target="_blank" class="fl">影音</a>
+                             </div>
+                         </div>
+
+                         <ul id="zxnav_4_prolist" class="grid-list clearfix">
+                               <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                <a class="thumb" target="_blank" href="">
+                                    <p class="grid-img"> 
+                                    <img alt="" src="../img/honor-floor4-dianyan (2).png"></p>
+                                    <div class="grid-title">荣耀YOYO智能音箱</div>
+                                      <p class="grid-price">¥179</p>
+                                 </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                  <a class="thumb" target="_blank" href="">
+                                   <p class="grid-img"> <img alt="" src="../img/honor-luyou (2).png"></p>
+                                 <div class="grid-title">荣耀路由 X2</div>
+                                 <p class="grid-price">¥159</p>
+                                  </a>
+                              </li>
+                               <li class="grid-items" data-track="true" data-sbom-code="3102060000503">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-luyou (1).png"></p>
+                                      <div class="grid-title">荣耀路由2S</div>
+                                       <p class="grid-price">¥179</p>
+                                   </a>
+                              </li>
+                               <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-luyou (2).png"></p>
+                                      <div class="grid-title">荣耀分布式路由</div>
+                                       <p class="grid-price">¥519</p>
+                                  </a>
+                              </li>
+                              <li class="grid-items" data-track="true" data-sbom-code="1303030003603">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-luyou (1).png"></p>
+                                      <div class="grid-title">荣耀盒子Pro</div>
+                                       <p class="grid-price">¥229</p>
+                                   </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="1302020001104">
+                                  <a class="thumb" target="_blank" href="https://www.vmall.com/product/259735704.html">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-floor4-air (3).png"></p>
+                                      <div class="grid-title">荣耀耳机</div>
+                                       <p class="grid-price">¥129</p>
+                                   </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="3102130005902">
+                                  <a class="thumb" target="_blank" href="">
+                                   <p class="grid-img"> <img alt="" src="../img/honor-floor4-air (4).png"></p>
+                                   <div class="grid-title">荣耀心晴耳机</div>
+                                   <p class="grid-price">¥129</p>
+                                   </a>
+                              </li>
+                         </ul>
+               </div>
+             <div class="naver-sub-wrap" style="display: none;">
+                         <div class="p-title clearfix">
+                             <div class="s1 fl">
+                                <a href="#" target="_blank"><span>全部</span>炫彩配件</a>
+                             </div>
+                             <div class="s2 fl clearfix">
+                                <a href="#" target="_blank" class="fl">贴膜</a>
+                                <a href="#" target="_blank" class="fl">保护壳</a>
+                                <a href="#" target="_blank" class="fl">保护套</a>
+                                <a href="#" target="_blank" class="fl">盒子专属配件</a>
+                                <a href="#" target="_blank" class="fl">表带</a>
+                                <a href="#" target="_blank" class="fl">耳机</a>
+                                <a href="#" target="_blank" class="fl">音箱</a>
+                                <a href="#" target="_blank" class="fl">电源/充电器/线材</a>
+                                <a href="#" target="_blank" class="fl">自拍杆/支架</a>
+                                <a href="#" target="_blank" class="fl">摄像机/镜头</a>
+                                <a href="#" target="_blank" class="fl">智能硬件</a>
+                             </div>
+                         </div>
+
+                         <ul id="zxnav_4_prolist" class="grid-list clearfix">
+                               <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                <a class="thumb" target="_blank" href="">
+                                    <p class="grid-img"> 
+                                    <img alt="" src="../img/honor-floor4-dianyan (1).png"></p>
+                                    <div class="grid-title">荣耀FlyPods无线耳机</div>
+                                      <p class="grid-price">¥799</p>
+                                 </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                  <a class="thumb" target="_blank" href="">
+                                   <p class="grid-img"> <img alt="" src="../img/honor-dayin.png"></p>
+                                 <div class="grid-title">荣耀MINI照片打印机</div>
+                                 <p class="grid-price">¥599</p>
+                                  </a>
+                              </li>
+                               <li class="grid-items" data-track="true" data-sbom-code="3102060000503">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-qiu.png"></p>
+                                      <div class="grid-title">荣耀音乐小巨蛋</div>
+                                       <p class="grid-price">¥199</p>
+                                   </a>
+                              </li>
+                               <li class="grid-items" data-track="true" data-sbom-code="1304080001401">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-p-floor4 (1).png"></p>
+                                      <div class="grid-title">荣耀智能体脂秤</div>
+                                       <p class="grid-price">¥169</p>
+                                  </a>
+                              </li>
+                              <li class="grid-items" data-track="true" data-sbom-code="1303030003603">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-floor4-air (3).png"></p>
+                                      <div class="grid-title">荣耀xSport 运动蓝牙耳机</div>
+                                       <p class="grid-price">¥229</p>
+                                   </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="1302020001104">
+                                  <a class="thumb" target="_blank" href="">
+                                      <p class="grid-img"> <img alt="" src="../img/honor-floor4-air (2).png"></p>
+                                      <div class="grid-title">荣耀10000mAh移动电源</div>
+                                       <p class="grid-price">¥129</p>
+                                   </a>
+                              </li>
+                                <li class="grid-items" data-track="true" data-sbom-code="3102130005902">
+                                  <a class="thumb" target="_blank" href="">
+                                   <p class="grid-img"> <img alt="" src="../img/honor-floor4-air (1).png"></p>
+                                   <div class="grid-title">荣耀心晴耳机</div>
+                                   <p class="grid-price">¥129</p>
+                                   </a>
+                              </li>
+                         </ul>
+             </div>
+      </section>
+     <!-- 下拉end -->
+
+      <!-- logo行 -->
+      <div class="logo">
+        <div class="logo-center">
+          
+          <div class="logo-left">
+            <div class="logo-div">
+              <a href="huawei.html">
+                <img src="../img/wmq-logo1.png" alt="">
+              </a>
+              <em></em>
+              <a href="wmq-honor-index.html">
+                <img src="../img/wmq-logo2.png" alt="">
+              </a>
+
+            </div>
+
+            <div class="naver">
+              <ul class="lis-naver " id="wmq-ulsid">
+                <li><a href="#">荣耀手机</a></li>
+                <li><a href="#">笔记本&平板</a></li>
+                <li><a href="#">潮流穿戴</a></li>
+                <li><a href="#">智能家居</a></li>
+                <li><a href="#">炫彩配件</a></li>
+              </ul>
+            </div>
+
+          </div>  
+
+            <div class="logo-right">
+                <div class="logo-box">
+               <input type="text" id='logo-input'>
+               <input type="submit" class="iconfont" id='logo-buttom' value="">
+              </div>
+              <div class="logo-key">
+                <a class="logo-one" href="#">荣耀9X</a>
+                <a class="logo-two" href="#">荣耀20</a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- logo行结束 -->
+
+     <!-- 轮播start -->
+  		 <div class="wmq-hot" id="wmq-hot">
+            <ul class="wmq-hot-uls" id="wmq-hot-uls">
+			       	<li><img src="../img/honor-lun1.jpg" alt=""></li>
+			       	<li><img src="../img/honor-lun2.jpg" alt=""></li>
+			       	<li><img src="../img/honor-lun3.jpg" alt=""></li>
+			       	<li><img src="../img/honor-lun4.jpg" alt=""></li>
+			       	<li><img src="../img/honor-lun5.jpg" alt=""></li>
+			       	<li><img src="../img/honor-lun6.jpg" alt=""></li>
+			       	<li><img src="../img/honor-lun1.jpg" alt=""></li>
+			     </ul>
+		      <span id="wmq-hot-left">左</span>
+		      <span id="wmq-hot-right">右</span>
+          	<ul class='wmq-hot-lis' id='wmq-hot-lis'>
+    	       	<li class="wmq-selected"></li>
+    	       	<li></li>
+    	       	<li></li>
+    	       	<li></li>
+    	       	<li></li>
+    	       	<li></li>
+    	    </ul>
+		  </div>
+      <!-- 轮播end -->
+
+      <!-- 预约时间start -->
+     <div class="wmq-honor-time-box">
+         <div class="text-left wmq-yuyue-left">预约：9月18日 11:00 - 9月19日 10:30</div>
+         <a href="#"><div class="text-right wmq-yushou-right">【荣耀超级新品日9月19日10:30直播】 立即预约</div></a> 
+     </div>
+     <!-- 预约时间end -->
+
+     <!-- 主体 -->
+  		 <div class="wmq-honor-prefecture-main">
+
+            <!-- 侧边导航 -->
+            <div class="wmq-daohang-box">
+             <h4 class="wmq-pink-daohang-h4">导航</h4>
+             <ul class="wmq-daohang-uls">
+               <li><a href="#wmqtest1" name="wmqtest1" class="sidenav-first sidenav wmq-test1">热销手机</a></li>
+               <li><a href="#wmqtest2" name="wmqtest2" class="sidenav-first sidenav wmq-test2">潮酷数码</a></li>
+               <li><a href="#wmqtest3" name="wmqtest3" class="sidenav-first sidenav wmq-test3">智能穿戴</a></li>
+               <li><a href="#wmqtest4" name="wmqtest4" class="sidenav-first sidenav wmq-test4">炫彩配件</a></li>
+               <li><a href="#wmqtest5" name="wmqtest5" class="sidenav-first sidenav wmq-test5">家具生态</a></li>
+               <li><a href="#wmqtest6" name="wmqtest6" class="sidenav-first sidenav wmq-test6">超值惊喜</a></li>
+               <li><a href="#wmqtest7" name="wmqtest7" class="sidenav-first sidenav  wmq-test7">荣耀青年</a></li>
+
+               <li>
+                <span class=" wmq-totop" style="background:red;"> 
+                    <svg class="wmq-icon-a" aria-hidden="true" style="position:absolute;right:0; bottom:2px;display:block;">
+                      <use xlink:href="#icon-huidaodingbu1"></use>
+                     </svg>
+                 </span>
+               </li>
+             </ul>
+             <!-- <p class="wmq-totop">顶部</p> -->
+            </div>
+
+
+             <section>
+
+
+
+                            <!--  热销手机 start-->
+                <div class="wmq-hot-phone wmq-test" id="wmqtest1">
+
+                  <div class="wmq-my-hot-phone-h">
+                       <h2 class="text-center wmq-honor-bt">热销手机</h2>
+                       <div class="wmq-honor-series">荣耀系列</div>
+                       <div class="wmq-play-series">畅玩系列</div>
+                       <div class="wmq-content-more"><a href="">更多</a></div>
+                  </div>
+
+                   <div class="wmq-hot-phone-top-two">
+                       <div class="img-l">
+                            <img src="../img/honor-p-left.png" alt="图片加载失败">
+                       </div>
+                       <div class="img-r">
+                           <img src="../img/honor-p-right.png" alt="图片加载失败">
+                       </div>
+                   </div>
+
+                   <div class="wmq-hot-phone-img-box">
+
+                          <div class="wmq-left-img">
+                             <img src="../img/wmq-honor-img-left.png"  alt="">
+                          </div>
+
+
+                          <div class="wmq-h-img">   
+                               <img src="../img/wmq-honor-img-h.jpg" alt="">
+                               <div class="h-position">
+                                 <h4 class="wmq-img-bt">荣耀9 X</h4>
+                                 <p class="h-song">1v以上会员送耳机</p>
+                                 <p class="h-monney">¥558</p>
+                               </div>
+                           </div>
+                          <div class="wmq-h2-img">  
+                             <img src="../img/wmq-honor-img-h2.jpg" alt="">
+                              <div class="h-position">
+                                 <h4 class="wmq-img-bt">荣耀20 play</h4>
+                                 <p class="h-song">2v以上会员送电宝</p>
+                                 <p class="h-monney">¥6558</p>
+                               </div>
+                           </div>
+                          <div class="wmq-b1-img">  
+                             <img src="../img/wmq-honor-img-h2.jpg" alt="">
+                              <div class="h-position">
+                                 <h4 class="wmq-img-bt">荣耀pro20 </h4>
+                                 <p class="h-song">3v以上会员送行李箱</p>
+                                 <p class="h-monney">¥3558</p>
+                               </div>
+                           </div>
+                          <div class="wmq-b2-img">  
+                             <img src="../img/wmq-honor-img-h2.jpg" alt="">
+                              <div class="h-position">
+                                 <h4 class="wmq-img-bt">荣耀play</h4>
+                                 <p class="h-song">4v以上会员送9.6折</p>
+                                 <p class="h-monney">¥5558</p>
+                               </div>
+                         </div>
+                          <div class="wmq-b3-img">  
+                             <img src="../img/wmq-honor-img-h2.jpg" alt="">
+                              <div class="h-position">
+                                 <h4 class="wmq-img-bt">荣耀9 X</h4>
+                                 <p class="h-song">1v以上会员送耳机</p>
+                                 <p class="h-monney">¥6558</p>
+                               </div>
+                          </div>
+                    </div>
+
+                </div>
+                <!-- 热销手机end -->
+               <!--  热销手机 start-->
+ <!--                <div class="wmq-hot-phone wmq-test" id="wmqtest1">
+ 
+   <div class="wmq-my-hot-phone-h">
+        <h2 class="text-center wmq-honor-bt">热销手机</h2>
+        <div class="wmq-honor-series">荣耀系列</div>
+        <div class="wmq-play-series">畅玩系列</div>
+        <div class="wmq-content-more"><a href="">更多</a></div>
+   </div>
+ 
+    <div class="wmq-hot-phone-top-two">
+       <a href="华为Mate30.html">
+        <div class="img-l">
+             <img src="../img/honor-p-left.png" alt="图片加载失败">
+        </div>
+        </a>
+         <a href="华为Mate30.html">
+        <div class="img-r">
+            <img src="../img/honor-p-right.png" alt="图片加载失败">
+        </div>
+        </a>
+    </div>
+ 
+    <div class="wmq-hot-phone-img-box">
+ 
+           <div class="wmq-left-img">
+              <img src="../img/wmq-honor-img-left.png"  alt="">
+           </div>
+ 
+ 
+           <div class="wmq-h-img">   
+                <img src="../img/wmq-honor-img-h.jpg" alt="">
+                <div class="h-position">
+                  <h4 class="wmq-img-bt">荣耀9 X</h4>
+                  <p class="h-song">1v以上会员送耳机</p>
+                  <p class="h-monney">¥558</p>
+                </div>
+            </div>
+ 
+            <a href="华为Mate30.html">
+           <div class="wmq-h2-img">  
+              <img src="../img/wmq-honor-img-h2.jpg" alt="">
+               <div class="h-position">
+                  <h4 class="wmq-img-bt">荣耀20 play</h4>
+                  <p class="h-song">2v以上会员送电宝</p>
+                  <p class="h-monney">¥6558</p>
+                </div>
+            </div>
+            </a>
+ 
+            <a href="华为Mate30.html">
+           <div class="wmq-b1-img">  
+              <img src="../img/wmq-honor-img-h2.jpg" alt="">
+               <div class="h-position">
+                  <h4 class="wmq-img-bt">荣耀pro20 </h4>
+                  <p class="h-song">3v以上会员送行李箱</p>
+                  <p class="h-monney">¥3558</p>
+                </div>
+            </div>
+ 
+            </a>
+             <a href="华为Mate30.html">
+           <div class="wmq-b2-img">  
+              <img src="../img/wmq-honor-img-h2.jpg" alt="">
+               <div class="h-position">
+                  <h4 class="wmq-img-bt">荣耀play</h4>
+                  <p class="h-song">4v以上会员送9.6折</p>
+                  <p class="h-monney">¥5558</p>
+                </div>
+          </div>
+          </a>
+ 
+          <a href="华为Mate30.html">
+           <div class="wmq-b3-img">  
+              <img src="../img/wmq-honor-img-h2.jpg" alt="">
+               <div class="h-position">
+                  <h4 class="wmq-img-bt">荣耀9 X</h4>
+                  <p class="h-song">1v以上会员送耳机</p>
+                  <p class="h-monney">¥6558</p>
+                </div>
+           </div>
+           </a>
+     </div>
+ 
+ </div> -->
+                <!-- 热销手机end -->
+
+
+                <!-- 潮酷数码 -->
+               <div class="wmq-cool-digital wmq-test" id="wmqtest2">
+
+                   <div class="wmq-cool-digital-h">
+                       <h2 class="text-center wmq-honor-bt2">潮酷数码</h2>
+                       <div class="wmq-cool-digital-h-uls">
+                          <ul class="text-center wmq-cool-digital-h-uls-ui">
+                              <li><a href="#" >笔记本电脑</a></li>
+                              <li><a href="#">平板电脑</a></li>
+                              <li><a href="#">笔记本配件</a></li>
+                              <li><a href="#">路由器</a></li>
+                              <li><a href="#">电视盒子</a></li>
+                               <div class="wmq-content-more2">
+                                   <a href="">更多</a>
+                               </div>
+                          </ul>
+                     </div>
+
+                <div class="grid2" style="background-color: ;padding-top:0px;padding-bottom:0px;padding-left:0px;">
+                  <div class="layout" id="latout">
+                   <div class="layout-bg"></div>
+                     <div class="layout-bgimg" style=" background: url('../img/wmq-honor-p-floor2-home.jpg') no-repeat left top ;"></div>
+
+                          <ul class="grid-list clearfix">
+                             <li class="grid-items style-2">
+                                <a href="" target="_blank">
+                                    <p class="pic"><img class="img" src="../img/honor-f2-1.png"></p>
+                                    <p class="sale"><span>新品上市</span></p>
+                                    <p class="title" title="荣耀智慧屏">荣耀智慧屏</p>
+                                    <p class="desc" title="新品上市">新品现货开售 30天不爽就退</p>
+                                    <div class="price-wrp">
+                                          <p class="price" style="color:#FFFFFF;">
+                                           <span class="price-currency">¥</span><span class="price-amount">3799</span>
+                                            <span class="price-from">起</span> 
+                                          </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="grid-items style-2">
+                                <a href="" target="_blank">
+                                    <p class="pic"><img class="img" src="../img/honor-f2-2.png"></p>
+                                    <p class="sale"><span>热销爆款</span></p>
+                                    <p class="title" title="荣耀MagicBook Pro">荣耀MagicBook Pro</p>
+                                    <p class="desc" title="热销爆款"></p>
+                                    <div class="price-wrp">
+                                     <p class="price" style="color:#FFFFFF;">
+                                       <span class="price-currency">¥</span><span class="price-amount">5499</span>
+                                        <span class="price-from">起</span>
+                                        </p>
+                                     </div>
+                                </a>
+                            </li>
+                            <li class="grid-items style-2">
+                                <a href="" target="_blank">
+                                    <p class="pic"><img class="img" src="../img/honor-f2-3.png"></p>
+                                    <p class="sale"><span>热销爆款</span></p>
+                                    <p class="title" title="荣耀路由Pro 2">荣耀路由Pro 2</p>
+                                    <p class="desc" title="热销爆款">限时直降54元</p>
+                                    <div class="price-wrp">
+                                    <p class="price" style="color:#FFFFFF;">
+                                     <span class="price-currency">¥</span><span class="price-amount">295</span>
+                                  </p>
+                               </div>
+                                </a>
+                            </li>
+                           </ul>
+                        </div>
+                       </div>
+
+
+
+                     <!--小轮播-->
+                    <div class="mod-productDrag" id="mod-productDrag1" >
+
+                     
+                      <div class="layout" id="layout1">
+                         <ul class="drag-list wlis1" id="wmq-uls-box ">
+                         <li class="drag-items"  style="width: 240px;">
+                             <a class="thumb" href="#" target="_blank">
+                                 <p class="drag-img">
+                                     <img src="../img/pc-honor-MagicBookPro.jpg">
+                                  </p>
+                                 <div class="drag-title">荣耀平板5 10.1英寸</div>
+                                 <p class="drag-desc">&nbsp; </p>
+                                 <p class="drag-price">
+                                <span>¥1199</span>
+                               </p>
+                             </a>
+                          </li>
+                          <li class="drag-items" style="width: 240px;">
+                              <a class="thumb" href="" target="_blank">
+                                  <p class="drag-img">
+                                      <img src="../img/honor-pc (5).png">
+                                   </p>
+                                  <div class="drag-title">荣耀平板5 8英寸</div>
+                                  <p class="drag-desc">&nbsp; </p>
+                                  <p class="drag-price">
+                                 <span>¥1099</span>
+                               </p>
+                              </a>
+                          </li>
+                           <li class="drag-items " style="width: 240px;">
+                              <a class="thumb" href="" target="_blank">
+                                  <p class="drag-img">
+                                      <img src="../img/honor-pc (6).png">
+                                   </p>
+                                  <div class="drag-title">荣耀Waterplay 防水影音平板</div>
+                                  <p class="drag-desc">&nbsp; </p>
+                                  <p class="drag-price">
+                                   <span>¥1299</span>
+                                   </p>
+                              </a>
+                          </li>
+                           <li class="drag-items " style="width: 240px;">
+                              <a class="thumb" href="" target="_blank">
+                                  <p class="drag-img">
+                                      <img src="../img/honor-pc (4).png">
+                                  </p>
+                                  <div class="drag-title">荣耀畅玩平板2 9.6英寸</div>
+                                  <p class="drag-desc">&nbsp; </p>
+                                  <p class="drag-price">
+                                   <span>¥999</span>
+                                 </p>
+                              </a>
+                          </li>
+                         <li class="drag-items " style="border-right: 1px solid rgb(234, 234, 234); width: 240px;">
+                              <a class="thumb" href="#" target="_blank">
+                                  <p class="drag-img">
+                                      <img src="../img/honor-pc (2).png">
+                                 </p>
+                                  <div class="drag-title">荣耀Waterplay 8英寸</div>
+                                  <p class="drag-desc">&nbsp; </p>
+                                  <p class="drag-price">
+                                   <span>¥999</span>
+                                   </p>
+                              </a>
+                          </li>
+                         <li class="drag-items " style="width: 240px;">
+                              <a class="thumb" href="#" target="_blank">
+                                  <p class="drag-img">
+                                      <img src="../img/honor-luyou (2).png">
+                                   </p>
+                                  <div class="drag-title">荣耀路由2S</div>
+                                  <p class="drag-desc">&nbsp; </p>
+                                  <p class="drag-price">
+                                   <span>¥179</span>
+                                   </p>
+                              </a>
+                          </li>
+                           <li class="drag-items " style="width: 240px;">
+                              <a class="thumb" href="#" target="_blank">
+                                  <p class="drag-img">
+                                      <img src="../img/honor-luyou (1).png">
+                                    </p>
+                                  <div class="drag-title">荣耀路由 X2</div>
+                                  <p class="drag-desc">&nbsp; </p>
+                                  <p class="drag-price">
+                                  <span>¥145</span>
+                                  </p>
+                              </a>
+                          </li>
+                           <li class="drag-items " style="width: 240px;">
+                              <a class="thumb" href="#" target="_blank">
+                                  <p class="drag-img">
+                                      <img src="../img/honor-qiu.png">
+                                 </p>
+                                  <div class="drag-title">荣耀YOYO智能音箱</div>
+                                  <p class="drag-desc">&nbsp; </p>
+                                  <p class="drag-price">
+                                  <span>¥189</span>
+                            </p>
+                              </a>
+                          </li>
+                           <li class="drag-items" style="width: 240px;">
+                              <a class="thumb" href="#" target="_blank">
+                                  <p class="drag-img">
+                                      <img src="../img/honor-p-floor4 (1).png">
+                                   </p>
+                                  <div class="drag-title">荣耀盒子Pro</div>
+                                  <p class="drag-desc">&nbsp; </p>
+                                  <p class="drag-price">
+                                  <span>¥399</span>
+                                 </p>
+                              </a>
+                          </li>
+
+                           <li class="drag-items" style="width: 240px;">
+                              <a class="thumb" href="" target="_blank">
+                                  <p class="drag-img">
+                                      <img src="../img/honor-pc (7).png">
+                                   </p>
+                                  <div class="drag-title">荣耀平板5 8英寸</div>
+                                  <p class="drag-desc">&nbsp; </p>
+                                  <p class="drag-price">
+                                 <span>¥1099</span>
+                               </p>
+                              </a>
+                          </li>
+                           <li class="drag-items " style="width: 240px;">
+                              <a class="thumb" href="" target="_blank">
+                                  <p class="drag-img">
+                                      <img src="../img/honor-pc (3).png">
+                                   </p>
+                                  <div class="drag-title">荣耀Waterplay 防水影音平板</div>
+                                  <p class="drag-desc">&nbsp; </p>
+                                  <p class="drag-price">
+                                   <span>¥1299</span>
+                                   </p>
+                              </a>
+                          </li>
+                        </ul>
+                      <div class="drag-btn swiper-button-prev btn-prev swiper-button-disabled wrbl1" id="wmq-left-b "><span></span></div>
+                      <div class="drag-btn swiper-button-next btn-next wrbr1" id="wmq-right-b "><span></span></div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- 潮酷数码end -->
+
+                <!--  智能穿戴start-->
+                <div class="wmq-beau wmq-test" id="wmqtest3">
+                   <div class="wmq-cool-digital-h" >
+                       <h2 class="text-center wmq-honor-bt2">智能穿戴</h2>
+                       <div class="wmq-cool-digital-h-uls">
+                          <ul class="text-center wmq-cool-digital-h-uls-ui">
+                              <li><a href="#"></a></li>
+                              <li><a href="#"></a></li>
+                              <li><a href="#" >手环/手表</a></li>
+                              <li><a href="#"></a></li>
+                              <li><a href="#"></a></li>
+                               <div class="wmq-content-more2">
+                                   <a href="">更多</a>
+                               </div>
+                          </ul>
+                       </div>
+
+                       <div class="grid2" style="background-color: ;padding-top:0px;padding-bottom:0px;padding-left:0px;">
+                           <div class="layout">
+                            <div class="layout-bg"></div>
+                            <div class="layout-bgimg" style=" background: url('../img/wmq-honor-floor3-bg.png') no-repeat left top ;"></div>
+
+                             <ul class="grid-list clearfix">
+                                <li class="grid-items style-2">
+                                   <a href="华为Mate30.html" target="_blank">
+                                       <p class="pic"><img class="img" src="../img/wmq-honor-floor3-1.png"></p>
+                                       <p class="sale"><span>新品上市</span></p>
+                                       <p class="title" title="荣耀手环5 篮球版">荣耀手环5 篮球版</p>
+                                       <p class="desc" title="新品上市">购机赠礼包 晒单赢电源/耳机</p>
+                                       <div class="price-wrp">
+                                             <p class="price" style="color:#FFFFFF;">
+                                              <span class="price-currency">¥</span><span class="price-amount">129</span>
+                                               <span class="price-from">起</span> 
+                                               </p>
+                                       </div>
+                                   </a>
+                                  </li>
+                                  <li class="grid-items style-2">
+                                   <a href="华为Mate30.html" target="_blank">
+                                       <p class="pic"><img class="img" src="../img/wmq-honor-floor3-2.png"></p>
+                                       <p class="sale"><span>热销爆款</span></p>
+                                       <p class="title" title="荣耀手表魔法系列">荣耀手表魔法系列</p>
+                                       <p class="desc">到手价699起 3期免息</p>
+
+                                       <div class="price-wrp">
+                                        <p class="price" style="color:#FFFFFF;">
+                                          <span class="price-currency">¥</span><span class="price-amount">699</span>
+                                           <span class="price-from">起</span>
+                                           </p>
+                                        </div>
+                                   </a>
+                                 </li>
+                               <li class="grid-items style-2">
+                                   <a href="华为Mate30.html" target="_blank">
+                                       <p class="pic"><img class="img" src="../img/wmq-honor-floor3-3.png"></p>
+                                       <p class="sale"><span>热销爆款</span></p>
+                                       <p class="title" title="荣耀路由Pro 2">荣耀手环5</p>
+                                       <p class="desc" title="热销爆款">血氧检测 心脏健康</p>
+                                       <div class="price-wrp">
+                                       <p class="price" style="color:#FFFFFF;">
+                                        <span class="price-currency">¥</span><span class="price-amount">189</span>
+                                     </p>
+                                  </div>
+                                   </a>
+                                </li>
+                             </ul>
+                       </div>
+                    </div>
+
+               <div class="J_mod mod-productDrag " >
+                   
+                 <div class="layout swiper-container swiper-container-horizontal"  >
+                    <ul class="drag-list swiper-wrapper clearfix wlis2" id="wmq-uls-box2">
+                     <li class="drag-items " style="width: 240px;">
+                          <a class="thumb" href="华为Mate30.html" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (1).png">
+                               </p>
+                              <div class="drag-title">荣耀手表魔法系列</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                             <span>¥699</span>
+                            </p>
+                          </a>
+                      </li>
+                      <li class="drag-items  " style="width: 240px;">
+                          <a class="thumb" href="" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (2).png">
+                               </p>
+                              <div class="drag-title">荣耀手表梦幻系列</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                             <span>¥499</span>
+                           </p>
+                          </a>
+                      </li>
+                       <li class="drag-items " style="width: 240px;">
+                          <a class="thumb" href="华为Mate30.html" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (3).png">
+                               </p>
+                              <div class="drag-title">荣耀手表影音</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                               <span>¥999</span>
+                               </p>
+                          </a>
+                      </li>
+                       <li class="drag-items" style="width: 240px;">
+                          <a class="thumb" href="华为Mate30.html" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (4).png">
+                              </p>
+                              <div class="drag-title">荣耀手环4 Running版</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                               <span>¥1999</span>
+                             </p>
+                          </a>
+                      </li>
+                     <li class="drag-items " style="border-right: 1px solid rgb(234, 234, 234); width: 240px;">
+                          <a class="thumb" href="华为Mate30.html" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (5).png">
+                             </p>
+                              <div class="drag-title">荣耀Waterplay 8英寸</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                               <span>¥999</span>
+                               </p>
+                          </a>
+                      </li>
+                     <li class="drag-items " style="width: 240px;">
+                          <a class="thumb" href="华为Mate30.html" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (6).png">
+                               </p>
+                              <div class="drag-title">荣耀手表2S</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                               <span>¥179</span>
+                               </p>
+                          </a>
+                      </li>
+                       <li class="drag-items " style="width: 240px;">
+                          <a class="thumb" href="华为Mate30.html" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (7).png">
+                                </p>
+                              <div class="drag-title">荣耀X2</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                              <span>¥245</span>
+                              </p>
+                          </a>
+                      </li>
+                       <li class="drag-items" style="width: 240px;">
+                          <a class="thumb" href="华为Mate30.html" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (8).png">
+                             </p>
+                              <div class="drag-title">荣耀YOYO智能手表</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                              <span>¥689</span>
+                        </p>
+                          </a>
+                      </li>
+                       <li class="drag-items " style="width: 240px;">
+                          <a class="thumb" href="#" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (1).png">
+                               </p>
+                              <div class="drag-title">荣耀手表Pro</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                              <span>¥399</span>
+                             </p>
+                          </a>
+                      </li>
+            
+                        <li class="drag-items" style="width: 240px;">
+                          <a class="thumb" href="#" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (1).png">
+                               </p>
+                              <div class="drag-title">荣耀手表魔法系列</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                             <span>¥699</span>
+                            </p>
+                          </a>
+                      </li>
+                       <li class="drag-items " style="width: 240px;">
+                          <a class="thumb" href="#" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (1).png">
+                               </p>
+                              <div class="drag-title">荣耀手表魔法系列</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                             <span>¥699</span>
+                            </p>
+                          </a>
+                      </li>
+                      <li class="drag-items  " style="width: 240px;">
+                          <a class="thumb" href="" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (2).png">
+                               </p>
+                              <div class="drag-title">荣耀手表梦幻系列</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                             <span>¥499</span>
+                           </p>
+                          </a>
+                      </li>
+                       <li class="drag-items " style="width: 240px;">
+                          <a class="thumb" href="" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (3).png">
+                               </p>
+                              <div class="drag-title">荣耀手表影音</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                               <span>¥999</span>
+                               </p>
+                          </a>
+                      </li>
+                       <li class="drag-items" style="width: 240px;">
+                          <a class="thumb" href="" target="_blank">
+                              <p class="drag-img">
+                                  <img src="../img/honor-f3-1 (4).png">
+                              </p>
+                              <div class="drag-title">荣耀手环4 Running版</div>
+                              <p class="drag-desc">&nbsp; </p>
+                              <p class="drag-price">
+                               <span>¥1999</span>
+                             </p>
+                          </a>
+                      </li>
+            
+                    </ul>
+                             <div class="drag-btn swiper-button-prev btn-prev swiper-button-disabled wrbl2" id="wmq-left-b2"><span></span></div>
+                              <div class="drag-btn swiper-button-next btn-next wrbr2" id="wmq-right-b2"><span></span></div>
+                      </div>
+                  </div>
+                 </div>
+    
+
+
+                    <!--  -->
+                </div>
+               <!--  智能穿戴end-->
+      
+
+               <!-- 炫彩配件start -->
+               <div class="wmq-mod wmq-test"  id="wmqtest4">
+                      <div class="wmq-cool-digital-h">
+                        <h2 class="text-center wmq-honor-bt2">炫彩配件</h2>
+                         <div class="wmq-cool-digital-h-uls">
+                            <ul class="text-center wmq-cool-digital-h-uls-ui" >
+                       
+                               <li><a href="">摄像机</a></li>
+                                <li><a href="#">贴膜</a></li>
+                                <li><a href="#">保护壳</a></li>
+                                <li><a href="#" >耳机</a></li>
+                                <li><a href="#">音箱</a></li>
+                                <li><a href="">自拍杆</a></li>
+                                
+                                 <div class="wmq-content-more2">
+                                     <a href="">更多</a>
+                                 </div>
+                            </ul>
+                        </div>
+
+                       <div class="grid2" style="background-color: ;padding-top:0px;padding-bottom:0px;padding-left:0px;">
+                         <div class="layout">
+                          <div class="layout-bg"></div>
+                          <div class="layout-bgimg" style=" background: url('../img/wmq-honor-p-floor4-home.jpg') no-repeat left top ;"></div>
+
+                          <ul class="grid-list clearfix ">
+                               <li class="grid-items style-2">
+                                  <a href="" target="_blank">
+                                      <p class="pic"><img class="img" src="../img/honor-p-floor4 (2).png"></p>
+                                      <p class="sale"><span>无线设计</span></p>
+                                      <p class="title" title="荣耀运动蓝牙耳机">荣耀运动蓝牙耳机</p>
+                                      <p class="desc" title="限时直降20元">限时直降20元</p>
+                                      <div class="price-wrp">
+                                            <p class="price" style="color:#FFFFFF;">
+                                             <span class="price-currency">¥</span><span class="price-amount">129</span>
+                                              <span class="price-from">起</span> 
+                                              </p>
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="grid-items style-2">
+                                  <a href="" target="_blank">
+                                      <p class="pic"><img class="img" src="../img/honor-p-floor4 (3).png"></p>
+                                      <p class="sale"><span>人气爆棚</span></p>
+                                      <p class="title" title="荣耀FlyPods青春版耳机">荣耀FlyPods青春版耳机</p>
+                                      <p class="desc">到手价199起 3期免息</p>
+
+                                      <div class="price-wrp">
+                                       <p class="price" style="color:#FFFFFF;">
+                                         <span class="price-currency">¥</span><span class="price-amount">199</span>
+                                          <span class="price-from">起</span>
+                                          </p>
+                                       </div>
+                                  </a>
+                              </li>
+                              <li class="grid-items style-2">
+                                  <a href="" target="_blank">
+                                      <p class="pic"><img class="img" src="../img/honor-p-floor4 (1).png"></p>
+                                      <p class="sale"><span>科学指导减脂</span></p>
+                                      <p class="title" title="荣耀智能体脂秤 蓝牙版"">荣耀智能体脂秤 蓝牙版</p>
+                                      <p class="desc" title="热销爆款">限时直降70元</p>
+                                      <div class="price-wrp">
+                                      <p class="price" style="color:#FFFFFF;">
+                                       <span class="price-currency">¥</span><span class="price-amount">99</span>
+                                    </p>
+                                 </div>
+                                  </a>
+                              </li>
+                             </ul>
+                             </div>
+                          </div>
+                   <div class="J_mod mod-productDrag ">
+                      <!--设置快速定位id-->
+                        <div class="layout " >
+                        <ul class="drag-list swiper-wrapper clearfix wlis3" id="wmq-uls-box3">
+                        <li class="drag-items " style="width: 240px;">
+                             <a class="thumb" href="#" target="_blank">
+                                 <p class="drag-img">
+                                     <img src="../img/honor-floor4-air (1).png">
+                                  </p>
+                                 <div class="drag-title">荣耀心心系列耳机</div>
+                                 <p class="drag-desc">&nbsp; </p>
+                                 <p class="drag-price">
+                                <span>¥79</span>
+                               </p>
+                             </a>
+                         </li>
+                         <li class="drag-items " style="width: 240px;">
+                             <a class="thumb" href="" target="_blank">
+                                 <p class="drag-img">
+                                     <img src="../img/honor-floor4-air (2).png">
+                                  </p>
+                                 <div class="drag-title">梦幻系列</div>
+                                 <p class="drag-desc">&nbsp; </p>
+                                 <p class="drag-price">
+                                <span>¥49</span>
+                              </p>
+                             </a>
+                         </li>
+                          <li class="drag-items" style="width: 240px;">
+                             <a class="thumb" href="" target="_blank">
+                                 <p class="drag-img">
+                                     <img src="../img/honor-p-floor4 (3).png">
+                                  </p>
+                                 <div class="drag-title">pro耳机</div>
+                                 <p class="drag-desc">&nbsp; </p>
+                                 <p class="drag-price">
+                                  <span>¥69</span>
+                                  </p>
+                             </a>
+                         </li>
+                          <li class="drag-items" style="width: 240px;">
+                             <a class="thumb" href="" target="_blank">
+                                 <p class="drag-img">
+                                     <img src="../img/honor-floor4-air (3).png">
+                                 </p>
+                                 <div class="drag-title">荣耀精美耳机</div>
+                                 <p class="drag-desc">&nbsp; </p>
+                                 <p class="drag-price">
+                                  <span>¥99</span>
+                                </p>
+                             </a>
+                         </li>
+                        <li class="drag-items " style="border-right: 1px solid rgb(234, 234, 234); width: 240px;">
+                             <a class="thumb" href="#" target="_blank">
+                                 <p class="drag-img">
+                                     <img src="../img/honor-floor4-dianyan (2).png">
+                                </p>
+                                 <div class="drag-title">荣耀魔方蓝牙音箱</div>
+                                 <p class="drag-desc">&nbsp; </p>
+                                 <p class="drag-price">
+                                  <span>¥299</span>
+                                  </p>
+                             </a>
+                         </li>
+                        <li class="drag-items" style="width: 240px;">
+                             <a class="thumb" href="#" target="_blank">
+                                 <p class="drag-img">
+                                     <img src="../img/honor-f3-1 (6).png">
+                                  </p>
+                                 <div class="drag-title">荣耀手表2S</div>
+                                 <p class="drag-desc">&nbsp; </p>
+                                 <p class="drag-price">
+                                  <span>¥179</span>
+                                  </p>
+                             </a>
+                         </li>
+                          <li class="drag-items" style="width: 240px;">
+                             <a class="thumb" href="#" target="_blank">
+                                 <p class="drag-img">
+                                     <img src="../img/honor-f3-1 (7).png">
+                                   </p>
+                                 <div class="drag-title">荣耀X2</div>
+                                 <p class="drag-desc">&nbsp; </p>
+                                 <p class="drag-price">
+                                 <span>¥245</span>
+                                 </p>
+                             </a>
+                         </li>
+                          <li class="drag-items" style="width: 240px;">
+                             <a class="thumb" href="#" target="_blank">
+                                 <p class="drag-img">
+                                     <img src="../img/honor-f3-1 (8).png">
+                                </p>
+                                 <div class="drag-title">荣耀YOYO智能手表</div>
+                                 <p class="drag-desc">&nbsp; </p>
+                                 <p class="drag-price">
+                                 <span>¥689</span>
+                           </p>
+                             </a>
+                         </li>
+                          <li class="drag-items" style="width: 240px;">
+                             <a class="thumb" href="#" target="_blank">
+                                 <p class="drag-img">
+                                     <img src="../img/honor-f3-1 (1).png">
+                                  </p>
+                                 <div class="drag-title">荣耀手表Pro</div>
+                                 <p class="drag-desc">&nbsp; </p>
+                                 <p class="drag-price">
+                                 <span>¥399</span>
+                                </p>
+                             </a>
+                         </li>
+                       </ul>
+                       <div class="drag-btn swiper-button-prev btn-prev swiper-button-disabled wrbl3" id="wmq-left-b"><span></span></div>
+                       <div class="drag-btn swiper-button-next btn-next wrbr3" id="wmq-right-b"><span></span></div>
+                      </div>
+
+
+                      </div>
+                   </div>
+               </div>
+                <!-- 炫彩配件 end-->
+
+
+                <!--  家具生态start -->
+                <div class="wmq-furniture-ecological wmq-test"  id="wmqtest5">
+                   <div class="wmq-cool-digital-h">
+                    <h2 class="text-center wmq-honor-bt2">家具生态</h2>
+                   </div>
+                    
+                   <div class="wmq-big-home">
+                      <ul class="wmq-big-home-uls">
+                        <li> 
+                          <div class="wmq-big-bome-uls-li">
+                            <div class="t_left">
+                              <img src="../img/honor-home1.jpg">
+                            </div>
+                            <div class="wmq-big-home-text">
+                              <p class="title" title="">美的热水壶</p>
+                              <p class="desc" title="限时直降10元">限时直降10元</p>
+                              <div class="price-wrp">
+                                  <p class="price" >
+                                   <span class="price-currency">¥</span><span class="price-amount">129</span> </p>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                            <div class="wmq-big-bome-uls-li">
+                            <div class="t_left">
+                              <img src="../img/honor-home2.jpg">
+                            </div>
+                            <div class="wmq-big-home-text">
+                              <p class="title" title="">荣耀智能护眼台灯Pro </p>
+                              <p class="desc" title="限时直降20元">限时直降20元</p>
+                              <div class="price-wrp">
+                                  <p class="price" >
+                                   <span class="price-currency">¥</span><span class="price-amount">349</span> </p>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="wmq-big-bome-uls-li">
+                            <div class="t_left">
+                              <img src="../img/honor-home3.jpg">
+                            </div>
+                            <div class="wmq-big-home-text">
+                              <p class="title" title="">智能即热热水吧</p>
+                              <p class="desc" title="限时直降60元">限时直降60元</p>
+                              <div class="price-wrp">
+                                  <p class="price" >
+                                   <span class="price-currency">¥</span><span class="price-amount">69</span> </p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </li>
+                      </ul>                 
+                   </div>  
+                
+                </div>
+                <!--  家具生态end -->
+
+
+               <!-- 超值惊喜start -->
+                <div class="wmq-super-surprise wmq-test" id="wmqtest6">
+                    <div class="wmq-cool-digital-h">
+                       <h2 class="text-center wmq-honor-bt2">超值惊喜</h2>
+                    </div>
+
+                    <div class="wmq-f5-h" >
+                      <a href=""><span class="text-left wmq-centre">领券中心</span></a>
+                      <a href=""> <span class="wmq-one-ling"> 一键领券></span> </a> 
+                      <span class="mypage-l" >  <1/1>  </span>
+                      <span class="wmq-super">超级福利社</span>
+                      <span class="text-right mypage-r"> <1/1> </span>
+                   </div>
+ 
+                     <div class="mod22-carnival-coupons" >
+                         <img src="../img/honor-f5.jpg" alt="">
+                     </div>
+
+                </div>
+                <!-- 超值惊喜end -->
+
+
+                <!-- 荣耀青年派start -->
+                <div class="wmq-young wmq-test" id="wmqtest7">
+                   <div class="wmq-cool-digital-h">
+                         <h2 class="text-center wmq-honor-bt2"> 荣耀青年派</ h2>
+                    </div>
+
+                     <div class="add-us">
+                       <a href="">
+                       <img src="../img/honor-young.jpg" alt=""></a>
+                     </div>
+                </div>
+               <!-- 荣耀青年派end -->
+
+            </section>
+            
+  		   </div>
+
+       </div>
+    <!-- main结束 -->
+        
+   <!-- 底部开始 -->
+    <footer class="wmq-f">
+      <div class="bottom-one">
+        <div class="btm-one">
+          <ul class="btmone-lis">
+            <li class="btmli1"><a href=""><i></i>百强企业&nbsp;品质保证</a></li>
+            <li class="btmli2"><a href=""><i></i>7天退货15天换货</a></li>
+            <li class="btmli3"><a href=""><i></i>48元起免运费</a></li>
+            <li class="btmli4"><a href=""><i></i>1000家维修网点全国联保</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-two">
+        <div class="btm-two">
+          <div class="btmtwo-left">
+            <dl class="btmleft1">
+            <dt>购物指南</dt>
+                <ul>
+                  <li><a href="">购物指南</a></li>
+                  <li><a href="">配送方式</a></li>
+                  <li><a href="">支付方式</a></li>
+                  <li><a href="">常见问题</a></li>
+              </ul>
+              
+            </dl>
+            <dl class="btmleft2">
+              <dt>保修与退换货</dt>
+                <ul>
+                  <li><a href="">保修政策</a></li>
+                  <li><a href="">退换货政策</a></li>
+                  <li><a href="">退换货流程</a></li>
+                  <li><a href="">保修状态查询</a></li>
+                  <li><a href="">配件防伪查询</a></li>
+                </ul>
+              
+            </dl>
+            <dl class="btmleft3">
+              <dt>维修与技术支持</dt>
+                <ul>
+                  <li><a href="">售后网点</a></li>
+                  <li><a href="">预约维修</a></li>
+                  <li><a href="">手机寄修</a></li>
+                  <li><a href="">备件价格查询</a></li>
+                  <li><a href="">上门服务</a></li>
+                </ul>
+            </dl>
+            <dl class="btmleft4">
+              <dt>特色服务</dt>
+                <ul>
+                  <li><a href="">防伪查询</a></li>
+                  <li><a href="">补购保障</a></li>
+                  <li><a href="">以旧换新</a></li>
+                  <li><a href="">礼品包装</a></li>
+                </ul>
+            </dl>
+            <dl class="btmleft5">
+              <dt>关于我们</dt>
+                <ul>
+                  <li><a href="">公司介绍</a></li>
+                  <li><a href="">华为商城简介</a></li>
+                  <li><a href="">华为线下门店</a></li>
+                  <li><a href="">荣耀线下门店</a></li>
+                  <li><a href="">诚征英才</a></li>
+                  <li><a href="">意见反馈</a></li>
+                </ul>
+            </dl>
+            <dl class="btmleft6">
+              <dt>友情链接</dt>
+                <ul>
+                  <li><a href="">华为集团</a></li>
+                  <li><a href="">华为CBG官网</a></li>
+                  <li><a href="wmq-honor-index.html">荣耀官网</a></li>
+                  <li><a href="">花粉俱乐部</a></li>
+                  <li><a href="">华为云</a></li>
+              </ul>
+            </dl>
+          </div>
+
+          <div class="btmtwo-right">
+            <div class="btmright-top">
+              <div class="btmright1">
+                <p>400-088-6888</p>
+              </div>
+              <div class="btmright2">
+                7x24小时客服热线（仅收市话费）
+              </div>
+              <div class="btmright3">
+                <a href=""><span class="iconfont icon-kefu"></span>在线客服</a>
+              </div>
+            </div>
+            
+            <div class="btmright-bottom">
+              <h3>关注新闻:</h3>
+              <ul>
+                <li><a href=""><span class="iconfont icon-kefu"></span></a></li>
+                <li><a href=""><span class="iconfont icon-kefu"></span></a></li>
+                <li><a href=""><span class="iconfont icon-kefu"></span></a></li>
+                <li><a href=""><span class="iconfont icon-kefu"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="bottom-three">
+        <div class="btm-three">
+          <div class="btm-center">
+            <p class="btm-left"><a href=""><img src="../img/VMALL.png" alt=""></a></p>
+            <div class="btm-mid">
+            <ul>
+              <li><a href="">华为集团</a></li>
+                <li><a href="">华为CBG官网</a></li>
+                <li><a href="wmq-honor-index.html">荣耀官网</a></li>
+                <li><a href="">花粉俱乐部</a></li>
+                <li><a href="">华为应用市场</a></li>
+                <li><a href="">EMUI</a></li>
+                <li><a href="">华为终端云空间</a></li>
+                <li><a href="">开发者联盟</a></li>
+                <li><a href="">华为商城手机版</a></li>
+                <li><a href="">网站地图</a></li>
+            </ul>
+            <a href="" >隐私声明</a>
+            <a href="" >服务协议</a>
+            <a href="" >COOKIES</a>
+            <p>&nbsp;© 2012-2019 华为终端有限公司 版权所有&nbsp;</p>
+            <a href="" >粤ICP备19015064号</a>
+            <span>|</span>
+            <a href="">粤公网安备 44190002003939号</a><br>
+            <p>增值电信业务经营许可证：粤B2-20190762</p>
+            <span>|</span>
+            <p>备案主体编号：44201919072182</p>
+            </div>
+            <p class="btm-right">
+              <a href=""><img src="../img/footer1.jpg" alt=""></a>
+              <a href=""><img src="../img/footer2.png" alt=""></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 底部结束 -->
+
+      <!-- 右下角移动栏 -->
+
+      </footer>
+      <!-- footer结束 -->
+  	</body>
+</html>
+
